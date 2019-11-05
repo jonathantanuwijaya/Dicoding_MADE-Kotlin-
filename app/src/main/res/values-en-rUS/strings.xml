@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Submission2</string>
+
+    <string-array name="judul_movie">
+        <item>A Star is Born</item>
+        <item>Aquaman</item>
+        <item>Avengers Infinity War</item>
+        <item>Bumblebee</item>
+        <item>Deadpool</item>
+        <item>Dragon</item>
+        <item>Dragonball</item>
+        <item>RobinHood</item>
+        <item>Venom</item>
+        <item>Spiderman</item>
+    </string-array>
+
+    <!--    <item>The Avengers and their allies must be willing to sacrifice everything in an attempt to defeat the powerful Thanos before he succeeds in destroying the universe.</item>-->
+    <!--    <item>During a run in 1987, Bumblebee found shelter in a junkyard in a small California coastal town. Charlie, the girl who was touching the age of 18 and was looking for identity, found Bumblebee, who was scratched and damaged a lot. While trying to make it work again, Charlie saw for himself that this was not an ordinary yellow VW frog.</item>-->
+    <!--    <item>The mercenary Wade Wilson, is undergoing an experiment to cure himself of cancer. He gained strength from the healing process, but with the consequence of being physically disabled.</item>-->
+    <!--    <item>A young Viking defies tradition when he befriends a dragon named Toothless. Together, these unusual heroes fight all odds to save their two worlds.</item>-->
+    <!--    <item>Dragon Ball follows the adventures of the protagonist Goku, a strong naive boy who, upon meeting Bulma, sets out to gather the seven wish-granting Dragon Balls. After becoming a student of martial arts master, Master Roshi (also known as Kame Sennin), he and his fellow pupils Krillin entered a tournament that attracts the most powerful fighters in the world. He then sets out on his own and winds up facing and destroying the single-handedly Red Ribbon Army. When Krillin is later murdered after another tournament, Goku exacts revenge on his killer, Piccolo Daimao. Three years later, Goku, now a young adult, must fight Piccolo Daimao offspring Piccolo.</item>-->
+    <!--    <item>Robin Hood (Taron Egerton) as a crusader returned to his country under different circumstances. He found corrupt officials and spent royal money while the people were miserable. Together with Little John (Jamie Foxx), he fought a very strong British tyranny.</item>-->
+    <!--    <item>A journalist, Eddie Brock (Tom Hardy) wants to make an investment case for the discovery led by Dr. Carlton Drake (Riz Ahmed). Because of his investigation, Eddie visited Dr.'s lab Calrlton Drake. Everything is intended to prove that Dr. Carlton Drake is committing an evil act using Symbiote.</item>-->
+    <!--    <item>Spider-Man crosses parallel dimensions and collaborates with Spider-Men from these dimensions to stop threats to all reality.</item>-->
+
+    <string-array name="deskripsi_movie">
+        <item>A country music star whose career began to fade, Jackson Maine (Bradley Cooper) discovered a very talented talent in the self of a young musician named Ally (Lady Gaga). Maine succeeded in making Ally a promising young star. But both are involved in a relationship that goes beyond mere mentors and students. Along with the skyrocketing careers of Ally and herself, Maine experienced a dilemma regarding this problem.</item>
+        <item>This film reveals the origin of Arthur Curry, a mighty human who can control water and sea animals. Where did he get his strength? Who are his parents, and does he deserve to be a king in the ocean ?</item>
+        <item>The Avengers and their allies must be willing to sacrifice everything in an attempt to defeat the powerful Thanos before he succeeds in destroying the universe.</item>
+        <item>During a run in 1987, Bumblebee found shelter in a junkyard in a small California coastal town. Charlie, the girl who was touching the age of 18 and was looking for identity, found Bumblebee, who was scratched and damaged a lot. While trying to make it work again, Charlie saw for himself that this was not an ordinary yellow VW frog.</item>
+        <item>The mercenary Wade Wilson, is undergoing an experiment to cure himself of cancer. He gained strength from the healing process, but with the consequence of being physically disabled.</item>
+        <item>A young Viking defies tradition when he befriends a dragon named Toothless. Together, these unusual heroes fight all odds to save their two worlds.</item>
+        <item>Dragon Ball follows the adventures of the protagonist Goku, a strong naive boy who, upon meeting Bulma, sets out to gather the seven wish-granting Dragon Balls. After becoming a student of martial arts master, Master Roshi (also known as Kame Sennin), he and his fellow pupils Krillin entered a tournament that attracts the most powerful fighters in the world. He then sets out on his own and winds up facing and destroying the single-handedly Red Ribbon Army. When Krillin is later murdered after another tournament, Goku exacts revenge on his killer, Piccolo Daimao. Three years later, Goku, now a young adult, must fight Piccolo Daimao offspring Piccolo.</item>
+        <item>Robin Hood (Taron Egerton) as a crusader returned to his country under different circumstances. He found corrupt officials and spent royal money while the people were miserable. Together with Little John (Jamie Foxx), he fought a very strong British tyranny.</item>
+
+
+        <item>A journalist, Eddie Brock (Tom Hardy) wants to make an investment case for the discovery led by Dr. Carlton Drake (Riz Ahmed). Because of his investigation, Eddie visited Dr.\'s lab Calrlton Drake. Everything is intended to prove that Dr. Carlton Drake is committing an evil act using Symbiote.</item>
+        <item>Spider-Man crosses parallel dimensions and collaborates with Spider-Men from these dimensions to stop threats to all reality.</item>
+
+
+    </string-array>
+
+    <array name="foto_movie">
+        <item>@drawable/poster_a_star</item>
+        <item>@drawable/poster_aquaman</item>
+        <item>@drawable/poster_avengerinfinity</item>
+        <item>@drawable/poster_bumblebee</item>
+        <item>@drawable/poster_deadpool</item>
+        <item>@drawable/poster_dragon</item>
+        <item>@drawable/poster_dragonball</item>
+        <item>@drawable/poster_robinhood</item>
+        <item>@drawable/poster_venom</item>
+        <item>@drawable/poster_spiderman</item>
+
+    </array>
+
+
+    <string name="tab_text_1">Home</string>
+    <string name="tab_text_2">Profile</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="ganti_bahasa">Ganti Bahasa</string>
+</resources>

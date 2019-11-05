@@ -1,0 +1,52 @@
+<resources>
+    <string name="app_name">Submission2</string>
+
+    <string-array name="judul_movie">
+        <item>A Star is Born</item>
+        <item>Aquaman</item>
+        <item>Avengers Infinity War</item>
+        <item>Bumblebee</item>
+        <item>Deadpool</item>
+        <item>Dragon</item>
+        <item>Dragonball</item>
+        <item>RobinHood</item>
+        <item>Venom</item>
+        <item>Spiderman</item>
+    </string-array>
+
+    <string-array name="deskripsi_movie">
+        <item>Seorang bintang musik country yang karirnya mulai memudar, Jackson Maine (Bradley Cooper) menemukan sebuah talenta yang sangat berbakat di dalam diri dari seorang musisi muda bernama Ally (Lady Gaga). Maine berhasil mengorbitkan Ally menjadi seorang bintang muda yang menjanjikan. Namun keduanya terlibat hubungan yang lebih jauh dari sekedar mentor dan anak didik. Seiring dengan meroketnya karir dari Ally dan dirinya, Maine mengalami dilema mengenai masalah ini.</item>
+        <item>Film ini mengungkap asal-usul Arthur Curry, manusia perkasa yang bisa mengendalikan air dan hewan laut. Dari mana ia mendapatkan kekuatannya? Siapa orang tuanya, dan pantaskah dia menjadi seorang raja di 7samudera?</item>
+        <item>The Avengers dan sekutu mereka harus bersedia mengorbankan segalanya dalam upaya untuk mengalahkan Thanos yang kuat sebelum ia berhasil menghancurkan alam semesta.</item>
+        <item>Dalam pelarian di tahun 1987, Bumblebee menemukan perlindungan di tempat rongsokan di sebuah kota kecil pinggir pantai California. Charlie, gadis yang tengah menyentuh usia 18 tahun dan sedang mencari jati diri, menemukan Bumblebee, yang banyak tergores dan rusak. Ketika berusaha memfungsikannya lagi, Charlie menyaksikan sendiri bahwa ini bukanlah mobil VW kodok berwarna kuning yang biasa.</item>
+        <item>Prajurit bayaran Wade Wilson, menjalani percobaan untuk menyembuhkan dirinya dari kanker. Ia memperoleh kekuatan dari proses penyembuhan itu, tapi dengan konsekuensi menjadi cacat fisik permanen.</item>
+        <item>Seorang Viking muda menentang tradisi ketika ia berteman dengan seekor naga bernama Toothless. Bersama, para pahlawan tidak biasa ini melawan segala rintangan demi menyelamatkan kedua dunia mereka.</item>
+        <item>Dragon Ball follows the adventures of the protagonist Goku, a strong naive boy who, upon meeting Bulma, sets out to gather the seven wish-granting Dragon Balls. After becoming a student of martial arts master Master Roshi (also known as Kame Sennin), he and his fellow pupil Krillin enter a tournament that attracts the most powerful fighters in the world. He then sets out on his own and winds up facing and destroying the Red Ribbon Army single-handedly. When Krillin is later murdered after another tournament, Goku exacts revenge on his killer, Piccolo Daimao. Three years later, Goku, now a young adult, must fight Piccolo Daimao offspring Piccolo.</item>
+        <item>Robin Hood (Taron Egerton) sebagai tentara salib kembali ke negerinya dalam keadaan yang berbeda. Ia menemukan pejabat korup dan menghabiskan uang kerajaan sementara rakyat dalam keadaan sengsara. Bersama Little John (Jamie Foxx) Ia melawan tirani Inggris yang sangat kuat.</item>
+        <item>Seorang jurnalis, Eddie Brock (Tom Hardy) ingin melakukan sebuah investasi kasus terhadap penemuan yang dipimpin oleh Dr. Carlton Drake (Riz Ahmed). Karena investigasinya, Eddie mengunjungi lab milik Dr. Calrlton Drake. Semuanya ditujukan untuk membuktikan bahwa Dr. Carlton Drake sedang melakukan tindakan jahat menggunakan Symbiote.</item>
+        <item>Spider-Man melintasi dimensi paralel dan bekerja sama dengan Spider-Men dari dimensi-dimensi tersebut untuk menghentikan ancaman terhadap semua realitas.</item>
+
+    </string-array>
+
+    <array name="foto_movie">
+        <item>@drawable/poster_a_star</item>
+        <item>@drawable/poster_aquaman</item>
+        <item>@drawable/poster_avengerinfinity</item>
+        <item>@drawable/poster_bumblebee</item>
+        <item>@drawable/poster_deadpool</item>
+        <item>@drawable/poster_dragon</item>
+        <item>@drawable/poster_dragonball</item>
+        <item>@drawable/poster_robinhood</item>
+        <item>@drawable/poster_venom</item>
+        <item>@drawable/poster_spiderman</item>
+
+    </array>
+
+
+    <string name="tab_text_1">Home</string>
+    <string name="tab_text_2">Profile</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="ganti_bahasa">Ganti Bahasa</string>
+</resources>
