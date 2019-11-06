@@ -53,7 +53,7 @@ class MoviesFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        var index = 1
+        var index = 0
         if (getArguments() != null) {
             index = arguments?.getInt(ARG_SECTION_NUMBER, 0) as Int
         }
@@ -69,24 +69,15 @@ class MoviesFragment : Fragment() {
 
 
     companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment MoviesFragment.
-         */
-        // TODO: Rename and change types and number of parameters
         private val ARG_SECTION_NUMBER = "section_number"
 
-        @JvmStatic
-        fun newInstance(index: Int): MoviesFragment {
-            val fragment = MoviesFragment()
-            val bundle = Bundle()
-            bundle.putInt(ARG_SECTION_NUMBER, index)
-            fragment.arguments = bundle
-            return fragment
-        }
+//        @JvmStatic
+//        fun newInstance(index: Int): MoviesFragment {
+//            val fragment = MoviesFragment()
+//            val bundle = Bundle()
+//            bundle.putInt(ARG_SECTION_NUMBER, index)
+//            fragment.arguments = bundle
+//            return fragment
+//        }
     }
 }

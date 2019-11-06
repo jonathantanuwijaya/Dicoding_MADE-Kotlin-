@@ -25,12 +25,6 @@ class ViewPagerAdapter(private val mContext: Context, fm: FragmentManager) : Fra
         }
         return fragment as Fragment
     }
-
-//    override fun getItem(position: Int): Fragment {
-//        val fragment = MoviesFragment.newInstance(position + 1)
-//        return fragment
-//    }
-
     override fun getPageTitle(position: Int): CharSequence? {
         return mContext.resources.getString(TAB_TITLES[position])
     }

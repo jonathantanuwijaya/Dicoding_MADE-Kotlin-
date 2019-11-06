@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
-import com.example.submission1.Pages.DetailActivity
+import com.example.submission1.Pages.DetailMovie
 import com.example.submission1.Model.FilmMovie
 import com.example.submission1.R
 import kotlinx.android.synthetic.main.list_movie.view.*
@@ -49,8 +49,8 @@ class MovieAdapter(private val listmovies: ArrayList<FilmMovie>) :
 
 
                 itemView.setOnClickListener {
-                    val intent = Intent(itemView.context, DetailActivity::class.java)
-                    intent.putExtra(DetailActivity.EXTRA_MOVIE, parcelablemovie)
+                    val intent = Intent(itemView.context, DetailMovie::class.java)
+                    intent.putExtra(DetailMovie.EXTRA_MOVIE, parcelablemovie)
                     itemView.context!!.startActivity(intent)
                 }
             }

@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.submission1.Adapter.TVShowAdapter
 import com.example.submission1.Model.FilmMovie
+import com.example.submission1.Model.FilmTV
 import com.example.submission1.R
 import kotlinx.android.synthetic.main.fragment_tvshow.*
 
@@ -17,18 +18,18 @@ class TVShowFragment : Fragment() {
     private lateinit var judulFilm: Array<String>
     private lateinit var descFilm: Array<String>
     private lateinit var foto: TypedArray
-    private var movies = arrayListOf<FilmMovie>()
+    private var movies = arrayListOf<FilmTV>()
     private var adaptermovie = TVShowAdapter(movies)
 
 
 
-    private fun init(): ArrayList<FilmMovie> {
-        judulFilm = resources.getStringArray(R.array.judul_movie)
-        descFilm = resources.getStringArray(R.array.deskripsi_movie)
-        foto = resources.obtainTypedArray(R.array.foto_movie)
-        val listmovies = ArrayList<FilmMovie>()
+    private fun init(): ArrayList<FilmTV> {
+        judulFilm = resources.getStringArray(R.array.judul_tvshow)
+        descFilm = resources.getStringArray(R.array.deskripsi_tvshow)
+        foto = resources.obtainTypedArray(R.array.foto_tvshow)
+        val listmovies = ArrayList<FilmTV>()
         for (position in judulFilm.indices) {
-            val film = FilmMovie(
+            val film = FilmTV(
                 judulFilm[position],
                 foto.getResourceId(position, -1),
                 descFilm[position]
@@ -65,25 +66,16 @@ class TVShowFragment : Fragment() {
     }
 
     companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment TVShowFragment.
-         */
-        // TODO: Rename and change types and number of parameters
         private val ARG_SECTION_NUMBER = "section_number"
 
 
-        @JvmStatic
-        fun newInstance(index: Int): TVShowFragment {
-            val fragment = TVShowFragment()
-            val bundle = Bundle()
-            bundle.putInt(ARG_SECTION_NUMBER, index)
-            fragment.arguments = bundle
-            return fragment
-        }
+//        @JvmStatic
+//        fun newInstance(index: Int): TVShowFragment {
+//            val fragment = TVShowFragment()
+//            val bundle = Bundle()
+//            bundle.putInt(ARG_SECTION_NUMBER, index)
+//            fragment.arguments = bundle
+//            return fragment
+//        }
     }
 }

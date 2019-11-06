@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Pages.DetailActivity">
+    tools:context=".Pages.DetailMovie">
 
     <ImageView
         android:id="@+id/ivMovie"

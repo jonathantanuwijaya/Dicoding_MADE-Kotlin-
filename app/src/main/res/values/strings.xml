@@ -14,6 +14,9 @@
         <item>Spiderman</item>
     </string-array>
 
+
+
+
     <string-array name="deskripsi_movie">
         <item>Seorang bintang musik country yang karirnya mulai memudar, Jackson Maine (Bradley Cooper) menemukan sebuah talenta yang sangat berbakat di dalam diri dari seorang musisi muda bernama Ally (Lady Gaga). Maine berhasil mengorbitkan Ally menjadi seorang bintang muda yang menjanjikan. Namun keduanya terlibat hubungan yang lebih jauh dari sekedar mentor dan anak didik. Seiring dengan meroketnya karir dari Ally dan dirinya, Maine mengalami dilema mengenai masalah ini.</item>
         <item>Film ini mengungkap asal-usul Arthur Curry, manusia perkasa yang bisa mengendalikan air dan hewan laut. Dari mana ia mendapatkan kekuatannya? Siapa orang tuanya, dan pantaskah dia menjadi seorang raja di 7samudera?</item>
@@ -21,12 +24,50 @@
         <item>Dalam pelarian di tahun 1987, Bumblebee menemukan perlindungan di tempat rongsokan di sebuah kota kecil pinggir pantai California. Charlie, gadis yang tengah menyentuh usia 18 tahun dan sedang mencari jati diri, menemukan Bumblebee, yang banyak tergores dan rusak. Ketika berusaha memfungsikannya lagi, Charlie menyaksikan sendiri bahwa ini bukanlah mobil VW kodok berwarna kuning yang biasa.</item>
         <item>Prajurit bayaran Wade Wilson, menjalani percobaan untuk menyembuhkan dirinya dari kanker. Ia memperoleh kekuatan dari proses penyembuhan itu, tapi dengan konsekuensi menjadi cacat fisik permanen.</item>
         <item>Seorang Viking muda menentang tradisi ketika ia berteman dengan seekor naga bernama Toothless. Bersama, para pahlawan tidak biasa ini melawan segala rintangan demi menyelamatkan kedua dunia mereka.</item>
-        <item>Dragon Ball follows the adventures of the protagonist Goku, a strong naive boy who, upon meeting Bulma, sets out to gather the seven wish-granting Dragon Balls. After becoming a student of martial arts master Master Roshi (also known as Kame Sennin), he and his fellow pupil Krillin enter a tournament that attracts the most powerful fighters in the world. He then sets out on his own and winds up facing and destroying the Red Ribbon Army single-handedly. When Krillin is later murdered after another tournament, Goku exacts revenge on his killer, Piccolo Daimao. Three years later, Goku, now a young adult, must fight Piccolo Daimao offspring Piccolo.</item>
+        <item>Dragon Ball mengikuti petualangan protagonis Goku, seorang anak lelaki naif yang kuat, yang setelah bertemu Bulma, berangkat untuk mengumpulkan tujuh Bola Naga pemberi harapan. Setelah menjadi mahasiswa master seni bela diri, Master Roshi (juga dikenal sebagai Kame Sennin), ia dan muridnya, Krillin, memasuki turnamen yang menarik para pejuang paling kuat di dunia. Dia kemudian berangkat sendiri dan akhirnya menghadap dan menghancurkan Tentara Pita Merah seorang diri. Ketika Krillin kemudian dibunuh setelah turnamen lain, Goku membalas dendam pada pembunuhnya, Piccolo Daimao. Tiga tahun kemudian, Goku, sekarang dewasa muda, harus bertarung melawan Piccolo Daimao, keturunan Piccolo.</item>
         <item>Robin Hood (Taron Egerton) sebagai tentara salib kembali ke negerinya dalam keadaan yang berbeda. Ia menemukan pejabat korup dan menghabiskan uang kerajaan sementara rakyat dalam keadaan sengsara. Bersama Little John (Jamie Foxx) Ia melawan tirani Inggris yang sangat kuat.</item>
         <item>Seorang jurnalis, Eddie Brock (Tom Hardy) ingin melakukan sebuah investasi kasus terhadap penemuan yang dipimpin oleh Dr. Carlton Drake (Riz Ahmed). Karena investigasinya, Eddie mengunjungi lab milik Dr. Calrlton Drake. Semuanya ditujukan untuk membuktikan bahwa Dr. Carlton Drake sedang melakukan tindakan jahat menggunakan Symbiote.</item>
         <item>Spider-Man melintasi dimensi paralel dan bekerja sama dengan Spider-Men dari dimensi-dimensi tersebut untuk menghentikan ancaman terhadap semua realitas.</item>
 
     </string-array>
+
+    <string-array name="judul_tvshow">
+        <item>Fairy Tail</item>
+        <item>Naruto Shippuden</item>
+        <item>Arrow</item>
+        <item>The Simpons</item>
+        <item>Iron Fist</item>
+        <item>Shameless</item>
+        <item>Alladin</item>
+        <item>John Wick</item>
+        <item>Bohemian</item>
+        <item>Flash</item>
+
+    </string-array>
+    <string-array name="deskripsi_tvshow">
+        <item>Seri ini bercerita tentang petualangan Lucy Heartfilia yang seorang penyihir sesudah ia bergabung dalam guild (kelompok) Fairy Tail dan berpasangan dengan Natsu Dragneel, penyihir berelemen api yang tengah mencari naga bernama Igneel</item>
+        <item>Naruto Shippuden adalah sebuah seri anime yang diadaptasi dari bagian II manga Naruto. Serial ini disutradarai oleh Hayato Date dan diproduksi oleh Studio Pierrot dan TV Tokyo. Pada bagian ini, pergerakan organisasi Akatsuki semakin terlihat. Naruto Shippuden juga telah dibuat versi movie-nya dengan judul Naruto Shippuden The Movie yang dirilis di Jepang pada Agustus 2007.</item>
+        <item>Arrow adalah serial televisi Amerika yang dikembangkan oleh Greg Berlanti, Andrew Kreisberg, dan Geoff Johns, yang mengudara di The CW. Serial ini didasari tokoh DC Comics Green Arrow (Oliver Queen), seorang pahlawan super berkostum, penumpas-kejahatan yang bersenjatakan busur dan panah. Serial ini menceritakan Oliver Queen, playboy miliuner yang pascaterdampar lima tahun di pulau terpencil, kembali pulang bersenjatakan busur dan panah untuk menumpas kejahatan di Kota Star sebagai vigilante rahasia bernama Green Arrow. </item>
+        <item>The Simpsons adalah serial kartun komedi Amerika Serikat yang diciptakan oleh Matt Groening. Program ini pertama kali mulai ditayangkan sebagai potongan acara Tracey Ullman Show pada tahun 1987. </item>
+        <item>Marvel Iron Fist atau hanya Iron Fist adalah sebuah acara televisi Amerika Serikat yang diciptakan untuk Netflix oleh Scott Buck, berdasarkan Komik Marvel karakter dengan nama yang sama. Serial ini merupakan bagian dari Marvel Cinematic Universe (MCU) dan memiliki kaitan dengan film-film MCU lainnya dan merupakan serial keempat dari waralaba ini, dan akan berkaitan pula dengan miniseri The Defenders</item>
+        <item>Shameless adalah serial televisi drama komedi Amerika yang dikembangkan oleh John Wells, yang memulai debutnya pada Showtime pada 9 Januari 2011. Ini adalah adaptasi dari seri Inggris Paul Abbott dengan nama yang sama dan menampilkan pemeran ensemble yang dipimpin oleh William H. Macy dan Emmy Rossum.</item>
+        <item>Seorang anak jalanan yang baik hati bernama Aladdin memulai petualangan magis setelah menemukan lampu yang melepaskan jin yang membingungkan sementara Wazir Agung yang haus kekuasaan bersaing untuk lampu yang sama yang memiliki kekuatan untuk membuat harapan terdalam mereka menjadi kenyataan.</item>
+        <item>Super-pembunuh John Wick kembali dengan label harga $ 14 juta di kepalanya dan sepasukan pembunuh pemburu hadiah di jejaknya. Setelah membunuh anggota guild pembunuh bayaran internasional, High Table, John Wick adalah orang yang dikucilkan, tetapi pria dan wanita hit paling kejam di dunia menunggu setiap kesempatannya.</item>
+        <item>Penyanyi Freddie Mercury, gitaris Brian May, drummer Roger Taylor dan gitaris John Deacon mengambil dunia musik dengan badai ketika mereka membentuk band rock n roll Queen pada tahun 1970. Lagu-lagu hit menjadi klasik instan. Ketika gaya hidup Mercury yang semakin liar mulai lepas kendali, Queen segera menghadapi tantangan terbesarnya - menemukan cara untuk menjaga band tetap bersama di tengah kesuksesan dan kelebihan.</item>
+        <item>Ini adalah spin-off dari Arrow, ada di alam fiksi yang sama. Serial ini mengikuti Barry Allen, yang diperankan oleh Grant Gustin, seorang penyelidik TKP yang memperoleh kecepatan manusia super, yang ia gunakan untuk memerangi para penjahat, termasuk yang lain yang juga memperoleh kemampuan manusia super.</item>
+    </string-array>
+    <array name="foto_tvshow">
+        <item>@drawable/poster_fairytail</item>
+        <item>@drawable/poster_naruto_shipudden</item>
+        <item>@drawable/poster_arrow</item>
+        <item>@drawable/poster_the_simpson</item>
+        <item>@drawable/poster_iron_fist</item>
+        <item>@drawable/poster_shameless</item>
+        <item>@drawable/poster_aladin</item>
+        <item>@drawable/postter_jhonwick</item>
+        <item>@drawable/poster_bohemian</item>
+        <item>@drawable/poster_flash</item>
+    </array>
 
     <array name="foto_movie">
         <item>@drawable/poster_a_star</item>
@@ -43,10 +84,8 @@
     </array>
 
 
-    <string name="tab_text_1">Movies</string>
-    <string name="tab_text_2">TV Shows</string>
+    <string name="tab_text_1">Film</string>
+    <string name="tab_text_2">Acara TV</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="ganti_bahasa">Ganti Bahasa</string>
 </resources>
