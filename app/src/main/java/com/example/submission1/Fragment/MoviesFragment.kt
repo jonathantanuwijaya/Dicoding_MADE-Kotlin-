@@ -71,13 +71,5 @@ class MoviesFragment : Fragment() {
     companion object {
         private val ARG_SECTION_NUMBER = "section_number"
 
-//        @JvmStatic
-//        fun newInstance(index: Int): MoviesFragment {
-//            val fragment = MoviesFragment()
-//            val bundle = Bundle()
-//            bundle.putInt(ARG_SECTION_NUMBER, index)
-//            fragment.arguments = bundle
-//            return fragment
-//        }
     }
 }
