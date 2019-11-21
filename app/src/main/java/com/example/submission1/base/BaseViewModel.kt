@@ -18,13 +18,13 @@ abstract class BaseViewModel : ViewModel(), InterVM {
 
     protected var subscriber: Disposable? = null
 
-    protected var view: IBaseView? = null
+    protected var view: BaseView? = null
 
     inline fun <reified api> api() : api = Retro().get().create(api::class.java)
 
     abstract fun onResponseSuccess(data: Any)
 
-    fun setupView(view: IBaseView) {
+    fun setupView(view: BaseView) {
         this.view = view
     }
 
@@ -52,7 +52,7 @@ abstract class BaseViewModel : ViewModel(), InterVM {
                 when (it) {
                     is HttpException -> {
                         try {
-                            val errBody = it.response().errorBody()?.string()
+                            val errBody = it.response()?.errorBody()?.string()
                             val json = JSONObject(errBody)
                             view?.onPushInformation(json["status_message"].toString(), null)
                         } catch (e: Exception) {

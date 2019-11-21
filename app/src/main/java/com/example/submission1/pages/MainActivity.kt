@@ -1,4 +1,4 @@
-package com.example.submission1.Pages
+package com.example.submission1.pages
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,7 +6,7 @@ import android.provider.Settings
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
-import com.example.submission1.Adapter.VPAdapter
+import com.example.submission1.adapter.VPAdapter
 import com.example.submission1.R
 import com.example.submission1.base.BaseActivity
 import com.example.submission1.model.VPagerTitle

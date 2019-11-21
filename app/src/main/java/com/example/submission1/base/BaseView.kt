@@ -2,7 +2,7 @@ package com.example.submission1.base
 
 import android.content.Context
 
-interface IBaseView {
+interface BaseView {
 
     fun contextView(): Context
 

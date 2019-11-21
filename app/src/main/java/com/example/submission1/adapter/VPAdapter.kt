@@ -1,4 +1,4 @@
-package com.example.submission1.Adapter
+package com.example.submission1.adapter
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager

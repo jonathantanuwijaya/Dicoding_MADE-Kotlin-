@@ -6,11 +6,11 @@ import android.view.View
 import androidx.fragment.app.Fragment
 
 
-abstract class BaseFragment<viewmodel : InterVM> : Fragment(), IBaseView {
+abstract class BaseFragment<viewmodel : InterVM> : Fragment(), BaseView {
 
     private val TAG = BaseFragment::class.java.simpleName
 
-    private var activity: IBaseView? = null
+    private var activity: BaseView? = null
 
     protected lateinit var viewmodel: viewmodel
 
@@ -18,7 +18,7 @@ abstract class BaseFragment<viewmodel : InterVM> : Fragment(), IBaseView {
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
-        activity = context as IBaseView
+        activity = context as BaseView
     }
 
     override fun onResume() {

@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
-abstract class BaseActivity<viewmodel : InterVM> : AppCompatActivity(), IBaseView {
+abstract class BaseActivity<viewmodel : InterVM> : AppCompatActivity(), BaseView {
     override fun contextView(): Context = this
 
     private val TAG = BaseActivity::class.java.simpleName

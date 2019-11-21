@@ -8,21 +8,15 @@ import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 
-
-/**
- * Created by yovi.putra
- *    on 10/Mar/2019 10:40
- * Company SIEMO - PT. Multipolar Technology, Tbk
- */
 class Retro {
     fun get() : Retrofit = instance
 
     private val instance: Retrofit by lazy {
-        val httpLoggingInterceptor = HttpLoggingInterceptor()
-        httpLoggingInterceptor.level = HttpLoggingInterceptor.Level.BODY
+        val HTTP = HttpLoggingInterceptor()
+        HTTP.level = HttpLoggingInterceptor.Level.BODY
 
         val okhttp = OkHttpClient.Builder()
-            .addNetworkInterceptor(httpLoggingInterceptor)
+            .addNetworkInterceptor(HTTP)
             .connectTimeout(60, TimeUnit.SECONDS)
             .writeTimeout(60, TimeUnit.SECONDS)
             .retryOnConnectionFailure(true)

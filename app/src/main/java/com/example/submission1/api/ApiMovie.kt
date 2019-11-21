@@ -1,4 +1,4 @@
-package com.example.submission1.Api
+package com.example.submission1.api
 
 import com.example.submission1.BuildConfig.APIKEY
 import com.example.submission1.model.MovieRes

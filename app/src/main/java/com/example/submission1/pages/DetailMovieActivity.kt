@@ -1,4 +1,4 @@
-package com.example.submission1.Pages
+package com.example.submission1.pages
 
 import android.annotation.SuppressLint
 import android.os.Bundle
