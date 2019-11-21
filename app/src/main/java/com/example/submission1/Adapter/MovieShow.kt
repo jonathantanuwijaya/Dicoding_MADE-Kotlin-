@@ -9,8 +9,8 @@ import com.bumptech.glide.Glide
 import com.example.submission1.R
 import com.example.submission1.base.BaseRecyclerViewAdapter
 import com.example.submission1.model.Movie
-import com.example.submission1.utils.Constans.Companion.POSTER_MEDIUM
-import com.example.submission1.utils.Constans.Companion.POSTER_URL
+import com.example.submission1.utils.Constant.Companion.POSTER_MEDIUM
+import com.example.submission1.utils.Constant.Companion.POSTER_URL
 import kotlinx.android.extensions.LayoutContainer
 import kotlinx.android.synthetic.main.list_movie.*
 

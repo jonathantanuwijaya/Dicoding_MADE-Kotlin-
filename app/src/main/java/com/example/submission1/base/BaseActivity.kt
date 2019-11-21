@@ -2,14 +2,9 @@ package com.example.submission1.base
 
 import android.content.Context
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.submission1.utils.toast
 
-/**
- * Created by yovi.putra
- * on 09/Mar/2019 10:56
- * Company SIEMO - PT. Multipolar Technology, Tbk
- */
 abstract class BaseActivity<viewmodel : InterVM> : AppCompatActivity(), IBaseView {
     override fun contextView(): Context = this
 
@@ -30,7 +25,7 @@ abstract class BaseActivity<viewmodel : InterVM> : AppCompatActivity(), IBaseVie
     }
 
     override fun onPushInformation(message: String?, data: Any?) {
-        message?.let { toast(it) }
+        message?.let { Toast.makeText(this, message, Toast.LENGTH_SHORT).show() }
     }
 
     override fun onShowProgressbar() {}

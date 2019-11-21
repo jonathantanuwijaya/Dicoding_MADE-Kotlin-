@@ -1,8 +1,8 @@
 package com.example.submission1.utils
 
-interface Constans {
+interface Constant {
     companion object {
-        const val BASE_URL = "https://api.themoviedb.org/3/discover/"
+//        const val BASE_URL = "https://api.themoviedb.org/3/discover/"
 
         const val POSTER_URL = "https://image.tmdb.org/t/p/"
 

@@ -9,17 +9,17 @@ import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
-import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.submission1.R
 import com.example.submission1.Adapter.MovieShow
 import com.example.submission1.base.BaseFragment
 import com.example.submission1.model.MovieRes
-import com.example.submission1.utils.Constans
-import com.example.submission1.viewmodel.TVShowVM
+import com.example.submission1.utils.Constant
+import com.example.submission1.viewmodel.MovieVM
 import kotlinx.android.synthetic.main.fragment_movies.*
-import kotlinx.android.synthetic.main.fragment_tvshow.*
 
-class TVShowFm : BaseFragment<TVShowVM>() {
+class MovieFragment : BaseFragment<MovieVM>() {
+
     private lateinit var show: MovieShow
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -32,27 +32,27 @@ class TVShowFm : BaseFragment<TVShowVM>() {
 
         swiperefresh.setColorSchemeColors(ContextCompat.getColor(contextView(), R.color.colorAccent))
         swiperefresh.setOnRefreshListener {
-            viewmodel.getTVShow().observe(this, setTVShow)
+            viewmodel.getMovie().observe(this, setValues)
         }
 
-        show = MovieShow {
-            val intent = Intent(contextView(), DetailMovieActivity::class.java)
-            intent.putExtra(Constans.INTENT_DATA, it)
-            startActivity(intent)
+        show = MovieShow { movie ->
+            val `in` = Intent(contextView(), DetailMovieActivity::class.java)
+            `in`.putExtra(Constant.INTENT_DATA, movie)
+            startActivity(`in`)
         }
 
-        rvlistMovie.layoutManager = GridLayoutManager(contextView(), 2)
+        rvlistMovie.layoutManager = LinearLayoutManager(contextView())
         rvlistMovie.overScrollMode = View.OVER_SCROLL_NEVER
         rvlistMovie.adapter = show
-        viewmodel.getTVShow().observe(this, setTVShow)
+        viewmodel.getMovie().observe(this, setValues)
     }
 
-    private val setTVShow = Observer<MovieRes> {
-        it.results?.let { it1 -> show.setItem(it1) }
+    private val setValues = Observer<MovieRes> {
+        it.results?.let { it2 -> show.setItem(it2) }
     }
 
-    override fun initViewModel(): TVShowVM {
-        val vm = ViewModelProviders.of(this).get(TVShowVM::class.java)
+    override fun initViewModel(): MovieVM {
+        val vm = ViewModelProviders.of(this).get(MovieVM::class.java)
         vm.setupView(this)
         return vm
     }
@@ -64,5 +64,4 @@ class TVShowFm : BaseFragment<TVShowVM>() {
     override fun onHideProgressbar() {
         swiperefresh.isRefreshing = false
     }
-
 }

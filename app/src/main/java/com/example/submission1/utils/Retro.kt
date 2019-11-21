@@ -1,6 +1,6 @@
 package com.example.submission1.utils
 
-import com.example.submission1.utils.Constans
+import com.example.submission1.BuildConfig
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -29,7 +29,7 @@ class Retro {
             .build()
 
         Retrofit.Builder()
-            .baseUrl(Constans.BASE_URL)
+            .baseUrl(BuildConfig.BASE_URL)
             .client(okhttp)
             .addConverterFactory(GsonConverterFactory.create())
             .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
