@@ -1,88 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Submission2</string>
+    <string name="app_name">Submission3</string>
 
-    <string-array name="judul_movie">
-        <item>A Star is Born</item>
-        <item>Aquaman</item>
-        <item>Avengers Infinity War</item>
-        <item>Bumblebee</item>
-        <item>Deadpool</item>
-        <item>Dragon</item>
-        <item>Dragonball</item>
-        <item>RobinHood</item>
-        <item>Venom</item>
-        <item>Spiderman</item>
-    </string-array>
-
-    <string-array name="deskripsi_movie">
-        <item>A country music star whose career began to fade, Jackson Maine (Bradley Cooper) discovered a very talented talent in the self of a young musician named Ally (Lady Gaga). Maine succeeded in making Ally a promising young star. But both are involved in a relationship that goes beyond mere mentors and students. Along with the skyrocketing careers of Ally and herself, Maine experienced a dilemma regarding this problem.</item>
-        <item>This film reveals the origin of Arthur Curry, a mighty human who can control water and sea animals. Where did he get his strength? Who are his parents, and does he deserve to be a king in the ocean ?</item>
-        <item>The Avengers and their allies must be willing to sacrifice everything in an attempt to defeat the powerful Thanos before he succeeds in destroying the universe.</item>
-        <item>During a run in 1987, Bumblebee found shelter in a junkyard in a small California coastal town. Charlie, the girl who was touching the age of 18 and was looking for identity, found Bumblebee, who was scratched and damaged a lot. While trying to make it work again, Charlie saw for himself that this was not an ordinary yellow VW frog.</item>
-        <item>The mercenary Wade Wilson, is undergoing an experiment to cure himself of cancer. He gained strength from the healing process, but with the consequence of being physically disabled.</item>
-        <item>A young Viking defies tradition when he befriends a dragon named Toothless. Together, these unusual heroes fight all odds to save their two worlds.</item>
-        <item>Dragon Ball follows the adventures of the protagonist Goku, a strong naive boy who, upon meeting Bulma, sets out to gather the seven wish-granting Dragon Balls. After becoming a student of martial arts master, Master Roshi (also known as Kame Sennin), he and his fellow pupils Krillin entered a tournament that attracts the most powerful fighters in the world. He then sets out on his own and winds up facing and destroying the single-handedly Red Ribbon Army. When Krillin is later murdered after another tournament, Goku exacts revenge on his killer, Piccolo Daimao. Three years later, Goku, now a young adult, must fight Piccolo Daimao offspring Piccolo.</item>
-        <item>Robin Hood (Taron Egerton) as a crusader returned to his country under different circumstances. He found corrupt officials and spent royal money while the people were miserable. Together with Little John (Jamie Foxx), he fought a very strong British tyranny.</item>
-
-
-        <item>A journalist, Eddie Brock (Tom Hardy) wants to make an investment case for the discovery led by Dr. Carlton Drake (Riz Ahmed). Because of his investigation, Eddie visited Dr.\'s lab Calrlton Drake. Everything is intended to prove that Dr. Carlton Drake is committing an evil act using Symbiote.</item>
-        <item>Spider-Man crosses parallel dimensions and collaborates with Spider-Men from these dimensions to stop threats to all reality.</item>
-
-
-    </string-array>
-
-    <array name="foto_movie">
-        <item>@drawable/poster_a_star</item>
-        <item>@drawable/poster_aquaman</item>
-        <item>@drawable/poster_avengerinfinity</item>
-        <item>@drawable/poster_bumblebee</item>
-        <item>@drawable/poster_deadpool</item>
-        <item>@drawable/poster_dragon</item>
-        <item>@drawable/poster_dragonball</item>
-        <item>@drawable/poster_robinhood</item>
-        <item>@drawable/poster_venom</item>
-        <item>@drawable/poster_spiderman</item>
-
-    </array>
-    <string-array name="judul_tvshow">
-        <item>Fairy Tail</item>
-        <item>Naruto Shippuden</item>
-        <item>Arrow</item>
-        <item>The Simpons</item>
-        <item>Iron Fist</item>
-        <item>Shameless</item>
-        <item>Alladin</item>
-        <item>John Wick</item>
-        <item>Bohemian</item>
-        <item>Flash</item>
-
-    </string-array>
-    <string-array name="deskripsi_tvshow">
-        <item>This series tells the story of the adventures of Lucy Heartfilia who was a witch after she joined the Fairy Tail guild and teamed up with Natsu Dragneel, a fire element wizard who was looking for a dragon named Igneel</item>
-        <item>Naruto Shippuden is an anime series adapted from part II of the Naruto manga. The series was directed by Hayato Date and produced by Studio Pierrot and TV Tokyo. In this section, the movement of the Akatsuki organization is increasingly visible. Naruto Shippuden has also made a movie version with the title Naruto Shippuden The Movie which was released in Japan in August 2007.</item>
-        <item>Arrow is an American television series developed by Greg Berlanti, Andrew Kreisberg, and Geoff Johns, who air on The CW. The series is based on the DC Comics Green Arrow (Oliver Queen), a costumed superhero, crime-takers who are armed with bows and arrows. This series tells Oliver Queen, a millionaire playboy billionaire who was five years stranded on a desert island, returned home armed with bows and arrows to quell crime in Star City as a secret vigilante named Green Arrow. </item>
-        <item>The Simpsons is a United States comedy cartoon series created by Matt Groening. The program first started airing as a snippet of the Tracey Ullman Show in 1987.</item>
-        <item>Marvel Iron Fist or simply Iron Fist is an American television show created for Netflix by Scott Buck, based on the Marvel Comic character of the same name. This series is part of the Marvel Cinematic Universe (MCU) and has links to other MCU films and is the fourth series of this franchise, and will also relate to the Defenders miniseries.</item>
-        <item>Shameless is an American comedy-drama television series developed by John Wells, which debuted on Showtime on January 9, 2011. It is an adaptation of Paul Abbott\'s British series of the same name and features an ensemble cast led by William H. Macy and Emmy Rossum.</item>
-        <item>A kindhearted street urchin named Aladdin embarks on a magical adventure after finding a lamp that releases a wisecracking genie while a power-hungry Grand Vizier vies for the same lamp that has the power to make their deepest wishes come true.</item>
-        <item>Super-assassin John Wick returns with a $14 million price tag on his head and an army of bounty-hunting killers on his trail. After killing a member of the shadowy international assassins guild, the High Table, John Wick is excommunicado, but the world’s most ruthless hit men and women await his every turn.</item>
-        <item>Singer Freddie Mercury, guitarist Brian May, drummer Roger Taylor and bass guitarist John Deacon take the music world by storm when they form the rock n roll band Queen in 1970. Hit songs become instant classics. When Mercury s increasingly wild lifestyle starts to spiral out of control, Queen soon faces its greatest challenge yet – finding a way to keep the band together amid the success and excess.</item>
-        <item>It is a spin-off from Arrow, existing in the same fictional universe. The series follows Barry Allen, portrayed by Grant Gustin, a crime scene investigator who gains super-human speed, which he uses to fight criminals, including others who have also gained superhuman abilities.</item>
-
-    </string-array>
-    <array name="foto_tvshow">
-        <item>@drawable/poster_fairytail</item>
-        <item>@drawable/poster_naruto_shipudden</item>
-        <item>@drawable/poster_arrow</item>
-        <item>@drawable/poster_the_simpson</item>
-        <item>@drawable/poster_iron_fist</item>
-        <item>@drawable/poster_shameless</item>
-        <item>@drawable/poster_aladin</item>
-        <item>@drawable/postter_jhonwick</item>
-        <item>@drawable/poster_bohemian</item>
-        <item>@drawable/poster_flash</item>
-    </array>
+    <string name="internet">Network problems, check your internet connection and try again</string>
+    <string name="server">Server under maintenance</string>
+    <string name="errorconnect">Cannot connecting to server, please try again a few minute</string>
 
 
     <string name="tab_text_1">Movies</string>

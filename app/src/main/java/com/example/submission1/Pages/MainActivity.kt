@@ -6,19 +6,31 @@ import android.os.Bundle
 import android.provider.Settings
 import android.view.Menu
 import android.view.MenuItem
-import com.example.submission1.Adapter.ViewPagerAdapter
+import android.view.View
+import androidx.appcompat.widget.Toolbar
+import com.example.submission1.Adapter.VPAdapter
 import com.example.submission1.R
+import com.example.submission1.base.BaseActivity
+import com.example.submission1.base.BaseToolbarActivity
+import com.example.submission1.model.VPager
+import com.example.submission1.viewmodel.MovieVM
 import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : BaseActivity<MovieVM>() {
+
+    override fun initViewModel(): MovieVM {
+        return MovieVM()
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        val frags = ArrayList<VPager>()
+        frags.add(VPager(getString(R.string.tab_text_1), MovieFm()))
+        frags.add(VPager(getString(R.string.tab_text_2), TVShowFm()))
 
-        val sectionsPagerAdapter =
-            ViewPagerAdapter(this, supportFragmentManager)
-        view_pager.adapter = sectionsPagerAdapter
+        view_pager.adapter = VPAdapter(frags, supportFragmentManager)
+        view_pager.overScrollMode = View.OVER_SCROLL_NEVER
         tabs.setupWithViewPager(view_pager)
         supportActionBar?.elevation = 0f
 
@@ -26,12 +38,12 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.main_menu,menu)
+        menuInflater.inflate(R.menu.main_menu, menu)
         return super.onCreateOptionsMenu(menu)
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if(item.itemId == R.id.action_change_settings){
+        if (item.itemId == R.id.action_change_settings) {
             val mIntent = Intent(Settings.ACTION_LOCALE_SETTINGS)
             startActivity(mIntent)
         }
