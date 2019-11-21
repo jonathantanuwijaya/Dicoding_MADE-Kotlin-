@@ -23,15 +23,15 @@ class TVShowFm : BaseFragment<TVShowVM>() {
     private lateinit var show: MovieShow
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.fragment_tvshow, container, false)
+        return inflater.inflate(R.layout.fragment_movies, container, false)
     }
 
     @SuppressLint("FragmentLiveDataObserve")
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
-        swiperefreshtv.setColorSchemeColors(ContextCompat.getColor(contextView(), R.color.colorAccent))
-        swiperefreshtv.setOnRefreshListener {
+        swiperefresh.setColorSchemeColors(ContextCompat.getColor(contextView(), R.color.colorAccent))
+        swiperefresh.setOnRefreshListener {
             viewmodel.getTVShow().observe(this, setTVShow)
         }
 
@@ -41,9 +41,9 @@ class TVShowFm : BaseFragment<TVShowVM>() {
             startActivity(intent)
         }
 
-        rvlistTVShows.layoutManager = GridLayoutManager(contextView(), 2)
-        rvlistTVShows.overScrollMode = View.OVER_SCROLL_NEVER
-        rvlistTVShows.adapter = show
+        rvlistMovie.layoutManager = GridLayoutManager(contextView(), 2)
+        rvlistMovie.overScrollMode = View.OVER_SCROLL_NEVER
+        rvlistMovie.adapter = show
         viewmodel.getTVShow().observe(this, setTVShow)
     }
 
