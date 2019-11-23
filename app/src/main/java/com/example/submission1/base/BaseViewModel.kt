@@ -6,7 +6,7 @@ import android.net.NetworkInfo
 import android.util.Log
 import androidx.lifecycle.ViewModel
 import com.example.submission1.R
-import com.example.submission1.utils.Retro
+import com.example.submission1.api.Retro
 import io.reactivex.disposables.Disposable
 import io.reactivex.functions.Consumer
 import org.json.JSONObject

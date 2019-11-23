@@ -1,4 +1,4 @@
-package com.example.submission1.utils
+package com.example.submission1.api
 
 import io.reactivex.ObservableTransformer
 import io.reactivex.android.schedulers.AndroidSchedulers

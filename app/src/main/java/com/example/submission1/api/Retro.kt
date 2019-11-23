@@ -1,4 +1,4 @@
-package com.example.submission1.utils
+package com.example.submission1.api
 
 import com.example.submission1.BuildConfig.BASE_URL
 import okhttp3.OkHttpClient
