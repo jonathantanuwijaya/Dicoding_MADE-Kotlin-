@@ -6,7 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
-import androidx.lifecycle.ViewModelProviders
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -22,7 +21,7 @@ import kotlinx.android.synthetic.main.fragment_favourite.*
 
 class FavouriteFragment : BaseFragment<FavsVM>() {
     private lateinit var favAdapterMovie: MovieShowAdapter
-    private lateinit var favAdapterTVShow :MovieShowAdapter
+    private lateinit var favAdapterTVShow: MovieShowAdapter
     private var favouriteRes: MovieRes? = null
 
 
@@ -42,6 +41,7 @@ class FavouriteFragment : BaseFragment<FavsVM>() {
         super.onStart()
         loadDataFavourite()
     }
+
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         loadDataFavourite()
@@ -56,7 +56,7 @@ class FavouriteFragment : BaseFragment<FavsVM>() {
         favAdapterMovie = MovieShowAdapter { favData ->
             val data = Intent(contextView(), DetailMovieActivity::class.java)
             data.putExtra(Constant.INTENT_DATA, favData)
-            data.putExtra(Constant.FRAGMENT_DATA,FilmType.MOVIE)
+            data.putExtra(Constant.FRAGMENT_DATA, FilmType.MOVIE)
             startActivity(data)
         }
         rvlistMovieFavourite.layoutManager = LinearLayoutManager(contextView())
@@ -79,6 +79,7 @@ class FavouriteFragment : BaseFragment<FavsVM>() {
             favouriteRes?.let { data ->
                 data.results?.let { value ->
                     favAdapterMovie.setItem(value)
+                    favAdapterTVShow.setItem(value)
                 }
             }
         } ?: run { loadDataFavourite() }
@@ -121,17 +122,12 @@ class FavouriteFragment : BaseFragment<FavsVM>() {
 
 
     override fun initViewModel(): FavsVM {
-//        return ViewModelProviders.of(this).get(FavsVM::class.java).apply {
-//            setupView(this@FavouriteFragment)
-        return ViewModelProvider(this,ViewModelProvider.NewInstanceFactory()).get(FavsVM::class.java).apply {
+        return ViewModelProvider(
+            this,
+            ViewModelProvider.NewInstanceFactory()
+        ).get(FavsVM::class.java).apply {
             setupView(this@FavouriteFragment)
         }
-
-        }
-
-
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-        loadDataFavourite()
     }
+
 }

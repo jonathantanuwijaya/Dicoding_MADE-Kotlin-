@@ -13,5 +13,7 @@
     <string name="tab_text_1">Film</string>
     <string name="tab_text_2">Acara TV</string>
     <string name="tab_text_3">Favorit</string>
+    <string name="favourite_movies">Favorit Movies</string>
+    <string name="favourite_tv_show">Favorit TV Show</string>
     <string name="ganti_bahasa">Ganti Bahasa</string>
 </resources>

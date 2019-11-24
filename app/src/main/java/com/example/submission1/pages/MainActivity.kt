@@ -8,6 +8,7 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
 import androidx.viewpager.widget.ViewPager
 import com.example.submission1.adapter.VPAdapter
 import com.example.submission1.R
@@ -23,7 +24,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 class MainActivity : BaseActivity<MovieVM>() {
     private var page: Fragment = FavouriteFragment()
     override fun initViewModel(): MovieVM {
-        return MovieVM()
+        return ViewModelProvider(this,ViewModelProvider.NewInstanceFactory()).get(MovieVM::class.java)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -52,6 +53,8 @@ class MainActivity : BaseActivity<MovieVM>() {
         view_pager.overScrollMode = View.OVER_SCROLL_NEVER
         tabs.setupWithViewPager(view_pager)
         supportActionBar?.elevation = 0f
+
+
 
 
     }

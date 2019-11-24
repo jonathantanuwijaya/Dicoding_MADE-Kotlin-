@@ -3,8 +3,7 @@ package com.example.submission1.pages
 import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.lifecycle.Observer
-
-import androidx.lifecycle.ViewModelProviders
+import androidx.lifecycle.ViewModelProvider
 import com.bumptech.glide.Glide
 import com.example.submission1.BuildConfig
 import com.example.submission1.R
@@ -69,7 +68,7 @@ class DetailMovieActivity : BaseActivity<FavsVM>() {
     }
 
     override fun initViewModel(): FavsVM {
-        val vm = ViewModelProviders.of(this).get(FavsVM::class.java)
+        val vm = ViewModelProvider(this,ViewModelProvider.NewInstanceFactory()).get(FavsVM::class.java)
         vm.setupView(this)
         return vm
     }

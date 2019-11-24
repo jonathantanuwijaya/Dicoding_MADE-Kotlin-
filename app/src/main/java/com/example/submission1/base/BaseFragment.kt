@@ -4,6 +4,7 @@ import android.content.Context
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
+import com.example.submission1.viewmodel.FavsVM
 
 
 abstract class BaseFragment<viewmodel : InterVM> : Fragment(), BaseView {
@@ -12,7 +13,7 @@ abstract class BaseFragment<viewmodel : InterVM> : Fragment(), BaseView {
 
     private var activity: BaseView? = null
 
-    protected lateinit var viewmodel: viewmodel
+    protected  var viewmodel: viewmodel ?= null
 
     protected abstract fun initViewModel(): viewmodel
 
@@ -24,6 +25,7 @@ abstract class BaseFragment<viewmodel : InterVM> : Fragment(), BaseView {
     override fun onResume() {
         super.onResume()
         setHasOptionsMenu(true)
+
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -33,7 +35,7 @@ abstract class BaseFragment<viewmodel : InterVM> : Fragment(), BaseView {
 
     override fun onDestroy() {
         super.onDestroy()
-        viewmodel.onDestroy()
+        viewmodel?.onDestroy()
     }
 
     override fun contextView(): Context = context as Context

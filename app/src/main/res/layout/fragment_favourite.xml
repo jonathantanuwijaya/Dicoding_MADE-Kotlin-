@@ -23,19 +23,19 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@android:color/darker_gray"
-                android:text="Favourite Movies" />
+                android:text="@string/favourite_movies" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rvlistMovieFavourite"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="500dp" />
 
             <TextView
                 android:gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@android:color/darker_gray"
-                android:text="Favourite TV Show" />
+                android:text="@string/favourite_tv_show" />
 
             <View
                 android:layout_width="match_parent"
@@ -46,7 +46,7 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rvlistTvShowFavourite"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="500dp" />
 
 
         </LinearLayout>

@@ -34,7 +34,7 @@ class TVShowFm : BaseFragment<TVShowVM>() {
 
         swiperefresh.setColorSchemeColors(ContextCompat.getColor(contextView(), R.color.colorAccent))
         swiperefresh.setOnRefreshListener {
-            viewmodel.getTVShow().observe(this, setTVShow)
+            viewmodel?.getTVShow()?.observe(this, setTVShow)
         }
 
         showAdapter = MovieShowAdapter {
@@ -47,7 +47,7 @@ class TVShowFm : BaseFragment<TVShowVM>() {
         rvlistMovie.layoutManager = LinearLayoutManager(contextView())
         rvlistMovie.overScrollMode = View.OVER_SCROLL_NEVER
         rvlistMovie.adapter = showAdapter
-        viewmodel.getTVShow().observe(this, setTVShow)
+        viewmodel?.getTVShow()?.observe(this, setTVShow)
     }
 
     private val setTVShow = Observer<MovieRes> {

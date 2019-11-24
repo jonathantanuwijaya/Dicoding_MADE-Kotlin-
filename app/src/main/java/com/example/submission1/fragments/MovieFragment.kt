@@ -32,7 +32,7 @@ class MovieFragment : BaseFragment<MovieVM>() {
 
         swiperefresh.setColorSchemeColors(ContextCompat.getColor(contextView(), R.color.colorAccent))
         swiperefresh.setOnRefreshListener {
-            viewmodel.getMovie().observe(viewLifecycleOwner, setValues)
+            viewmodel?.getMovie()?.observe(viewLifecycleOwner, setValues)
         }
 
         showAdapter = MovieShowAdapter { movie ->
@@ -45,7 +45,7 @@ class MovieFragment : BaseFragment<MovieVM>() {
         rvlistMovie.layoutManager = LinearLayoutManager(contextView())
         rvlistMovie.overScrollMode = View.OVER_SCROLL_NEVER
         rvlistMovie.adapter = showAdapter
-        viewmodel.getMovie().observe(viewLifecycleOwner, setValues)
+        viewmodel?.getMovie()?.observe(viewLifecycleOwner, setValues)
     }
 
     private val setValues = Observer<MovieRes> {
