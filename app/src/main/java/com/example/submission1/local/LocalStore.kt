@@ -34,9 +34,6 @@ class LocalStore(context: Context) : ManagedSQLiteOpenHelper(
                 TITLE to TEXT,
                 ORIGINAL_TITLE to TEXT,
                 OVERVIEW to TEXT,
-                ADULT to INTEGER,
-                RELEASE_DATE to TEXT,
-                RATE to TEXT,
                 BACKDROP to TEXT,
                 POSTER to TEXT,
                 TYPE to TEXT

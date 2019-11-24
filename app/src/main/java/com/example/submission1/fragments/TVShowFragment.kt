@@ -1,4 +1,4 @@
-package com.example.submission1.pages
+package com.example.submission1.fragments
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -8,22 +8,24 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProviders
+import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.submission1.R
 import com.example.submission1.adapter.MovieShowAdapter
 import com.example.submission1.base.BaseFragment
+import com.example.submission1.model.FilmType
 import com.example.submission1.model.MovieRes
+import com.example.submission1.pages.DetailMovieActivity
 import com.example.submission1.utils.Constant
 import com.example.submission1.viewmodel.TVShowVM
-import kotlinx.android.synthetic.main.fragment_movies.*
+import kotlinx.android.synthetic.main.main_fragment.*
 
 
 class TVShowFm : BaseFragment<TVShowVM>() {
     private lateinit var showAdapter: MovieShowAdapter
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.fragment_movies, container, false)
+        return inflater.inflate(R.layout.main_fragment, container, false)
     }
 
     @SuppressLint("FragmentLiveDataObserve")
@@ -38,6 +40,7 @@ class TVShowFm : BaseFragment<TVShowVM>() {
         showAdapter = MovieShowAdapter {
             val intent = Intent(contextView(), DetailMovieActivity::class.java)
             intent.putExtra(Constant.INTENT_DATA, it)
+            intent.putExtra(Constant.FRAGMENT_DATA,FilmType.TVSHOW)
             startActivity(intent)
         }
 
@@ -52,7 +55,7 @@ class TVShowFm : BaseFragment<TVShowVM>() {
     }
 
     override fun initViewModel(): TVShowVM {
-        val vm = ViewModelProviders.of(this).get(TVShowVM::class.java)
+        val vm = ViewModelProvider(this,ViewModelProvider.NewInstanceFactory()).get(TVShowVM::class.java)
         vm.setupView(this)
         return vm
     }

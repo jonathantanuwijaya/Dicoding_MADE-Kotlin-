@@ -4,12 +4,6 @@ import android.widget.Filter
 import android.widget.Filterable
 import androidx.recyclerview.widget.RecyclerView
 
-
-/**
- * Created by yovi.putra
- *    on 14/Feb/2019 15:36
- * Company SIEMO - PT. Multipolar Technology, Tbk
- */
 interface FilterResultListener <T>{
     fun onFilterResult(query: String?): MutableList<T>
 }

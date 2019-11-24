@@ -9,7 +9,7 @@
 
     <string name="tab_text_1">Movies</string>
     <string name="tab_text_2">TV Shows</string>
-
+    <string name="tab_text_3">Favourite</string>
 
     <string name="ganti_bahasa">Change Languange</string>
 </resources>
