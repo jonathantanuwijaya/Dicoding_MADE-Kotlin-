@@ -53,9 +53,10 @@ class MovieFragment : BaseFragment<MovieVM>() {
     }
 
     override fun initViewModel(): MovieVM {
-        val vm = ViewModelProvider(this,ViewModelProvider.NewInstanceFactory()).get(MovieVM::class.java)
-        vm.setupView(this)
-        return vm
+        return ViewModelProvider(this,ViewModelProvider.NewInstanceFactory()).get(MovieVM::class.java).apply {
+            setupView(this@MovieFragment)
+        }
+
     }
 
     override fun onShowProgressbar() {

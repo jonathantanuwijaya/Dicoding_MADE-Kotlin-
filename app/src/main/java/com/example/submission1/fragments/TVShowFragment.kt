@@ -55,9 +55,10 @@ class TVShowFm : BaseFragment<TVShowVM>() {
     }
 
     override fun initViewModel(): TVShowVM {
-        val vm = ViewModelProvider(this,ViewModelProvider.NewInstanceFactory()).get(TVShowVM::class.java)
-        vm.setupView(this)
-        return vm
+        return ViewModelProvider(this,ViewModelProvider.NewInstanceFactory()).get(TVShowVM::class.java).apply {
+            setupView(this@TVShowFm)
+        }
+
     }
 
     override fun onShowProgressbar() {

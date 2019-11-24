@@ -9,7 +9,6 @@ import android.view.MenuItem
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import androidx.viewpager.widget.ViewPager
 import com.example.submission1.adapter.VPAdapter
 import com.example.submission1.R
 import com.example.submission1.base.BaseActivity

@@ -31,29 +31,31 @@ class DetailMovieActivity : BaseActivity<FavsVM>() {
     @SuppressLint("SetTextI18n")
     private fun initViewConfigure() {
 
-        val movie = intent.getParcelableExtra<Movie>(Constant.INTENT_DATA)
+        val movie = intent?.getParcelableExtra<Movie>(Constant.INTENT_DATA)
         type = intent.getSerializableExtra(Constant.FRAGMENT_DATA) as FilmType
-        tvJudulMovieDetail.text = movie.title
-        tvDeskripsiMovieDetail.text = movie.overview
+        tvJudulMovieDetail.text = movie?.title
+        tvDeskripsiMovieDetail.text = movie?.overview
 
         iv_btnFav.setOnClickListener {
             if (it.tag as Boolean) {
                 viewmodel.delete(movie?.id.toString())
             } else {
-                viewmodel.addFav(movie, type)
+                if (movie != null) {
+                    viewmodel.addFav(movie, type)
+                }
             }
-            viewmodel.setToFavourite(movie.id.toString()).observe(this, setFavButton)
+            viewmodel.setToFavourite(movie?.id.toString()).observe(this, setFavButton)
         }
 
-        viewmodel.setToFavourite(movie.id.toString()).observe(this, setFavButton)
+        viewmodel.setToFavourite(movie?.id.toString()).observe(this, setFavButton)
 
         Glide.with(this)
-            .load(BuildConfig.BASE_URL_POSTER + Constant.POSTER_LARGE + movie.backdrop_path)
+            .load(BuildConfig.BASE_URL_POSTER + Constant.POSTER_LARGE + movie?.backdrop_path)
             .placeholder(R.mipmap.ic_launcher)
             .into(ivMovie)
 
         Glide.with(this)
-            .load(BuildConfig.BASE_URL_POSTER + Constant.POSTER_MEDIUM + movie.poster_path)
+            .load(BuildConfig.BASE_URL_POSTER + Constant.POSTER_MEDIUM + movie?.poster_path)
             .placeholder(R.mipmap.ic_launcher)
             .into(ivMovie)
     }
@@ -68,7 +70,8 @@ class DetailMovieActivity : BaseActivity<FavsVM>() {
     }
 
     override fun initViewModel(): FavsVM {
-        val vm = ViewModelProvider(this,ViewModelProvider.NewInstanceFactory()).get(FavsVM::class.java)
+        val vm =
+            ViewModelProvider(this, ViewModelProvider.NewInstanceFactory()).get(FavsVM::class.java)
         vm.setupView(this)
         return vm
     }

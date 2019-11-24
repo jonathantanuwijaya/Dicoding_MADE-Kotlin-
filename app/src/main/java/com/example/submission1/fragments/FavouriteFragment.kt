@@ -64,10 +64,10 @@ class FavouriteFragment : BaseFragment<FavsVM>() {
         rvlistMovieFavourite.adapter = favAdapterMovie
 
         favAdapterTVShow = MovieShowAdapter { favTV ->
-            val TVS = Intent(contextView(), DetailMovieActivity::class.java)
-            TVS.putExtra(Constant.INTENT_DATA, favTV)
-            TVS.putExtra(Constant.FRAGMENT_DATA, FilmType.TVSHOW)
-            startActivity(TVS)
+            val tvshowIntent = Intent(contextView(), DetailMovieActivity::class.java)
+            tvshowIntent.putExtra(Constant.INTENT_DATA, favTV)
+            tvshowIntent.putExtra(Constant.FRAGMENT_DATA, FilmType.TVSHOW)
+            startActivity(tvshowIntent)
         }
         rvlistTvShowFavourite.layoutManager = LinearLayoutManager(contextView())
         rvlistTvShowFavourite.overScrollMode = View.OVER_SCROLL_NEVER
