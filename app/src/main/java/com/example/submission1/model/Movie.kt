@@ -44,6 +44,7 @@ data class FavMovie(
         const val TYPE = "FAVS_TYPE"
     }
 }
+
 enum class FilmType {
     MOVIE, TVSHOW
 }

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".pages.SettingActivity">
+
+    <RelativeLayout
+        android:id="@+id/layout_release_remainder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="?selectableItemBackground"
+        android:padding="21dp">
+
+        <TextView
+            android:id="@+id/tv_title_release_remainder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Reminder rilis film terbaru"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_desc_release_remainder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_title_release_remainder"
+            android:text="Reminder film terbaru"
+            android:textSize="14sp" />
+
+        <Switch
+            android:id="@+id/sw_release_remainder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="?selectableItemBackgroundBorderless" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_daily_remainder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?selectableItemBackground"
+        android:padding="21dp">
+
+        <TextView
+            android:id="@+id/tv_title_daily_remainder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pengingat "
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_desc_daily_remainder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_title_daily_remainder"
+            android:text="Reminder kembali ke aplikasi"
+            android:textSize="14sp" />
+
+        <Switch
+            android:id="@+id/sw_daily_remainder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="?selectableItemBackgroundBorderless" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_language"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?selectableItemBackground"
+        android:padding="21dp">
+
+        <TextView
+            android:id="@+id/tv_title_language"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="21dp"
+            android:text="Bahasa"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_desc_language"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_title_language"
+            android:textSize="14sp"
+            tools:text="USA" />
+    </RelativeLayout>
+
+</LinearLayout>
