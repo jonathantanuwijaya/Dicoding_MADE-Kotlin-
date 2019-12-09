@@ -10,15 +10,15 @@ import com.example.submission1.model.VPagerTitle
 
 class VPAdapter(private val fragments: List<VPagerTitle>, fm: FragmentManager) :
     FragmentPagerAdapter(fm, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT) {
-//    private  var menuitem: Menu
+    private  var menuitem: Menu ? = null
 
     override fun getItem(position: Int): Fragment {
 //        menu?.findItem(R.id.menu_search)?.isVisible = this.page != FavouriteFragment()
 //         var menuitem =Menu
-//        when (fragments[position].fragment) {
-//            is FavouriteFragment
-//            -> menuitem.findItem(R.id.menu_search)?.isVisible = false
-//        }
+        when (fragments[position].fragment) {
+            is FavouriteFragment
+            -> menuitem?.findItem(R.id.menu_search)?.isVisible = false
+        }
         return fragments[position].fragment
     }
 
