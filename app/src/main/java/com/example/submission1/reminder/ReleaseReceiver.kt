@@ -15,19 +15,18 @@ import io.reactivex.disposables.Disposable
 import java.text.SimpleDateFormat
 import java.util.*
 
-class ReleaseReminder : BroadcastReceiver() {
-    private val TAG = ReleaseReminder::class.java.simpleName
+class ReleaseReceiver : BroadcastReceiver() {
     private var subs: Disposable? = null
-    private val RELEASE_REMINDER = 102
+    private val ReleaseReminder = 102
 
     fun startReleaseReminder(context: Context) {
         val alarm = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
-        val i = Intent(context, DailyReminder::class.java)
+        val i = Intent(context, ReleaseReceiver::class.java)
         val calendar = Calendar.getInstance()
-        calendar.set(Calendar.HOUR_OF_DAY, 7)
+        calendar.set(Calendar.HOUR_OF_DAY, 8)
         calendar.set(Calendar.MINUTE, 0)
         calendar.set(Calendar.SECOND, 0)
-        val lateintent = PendingIntent.getBroadcast(context, RELEASE_REMINDER, i, 0)
+        val lateintent = PendingIntent.getBroadcast(context, ReleaseReminder, i, 0)
         alarm.setInexactRepeating(
             AlarmManager.RTC_WAKEUP,
             calendar.timeInMillis,
@@ -37,9 +36,9 @@ class ReleaseReminder : BroadcastReceiver() {
     }
 
     fun stopDailyReminder(context: Context) {
-        val i = Intent(context, DailyReminder::class.java)
+        val i = Intent(context, ReleaseReceiver::class.java)
         val alarm = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
-        val lateintent = PendingIntent.getBroadcast(context, RELEASE_REMINDER, i, 0)
+        val lateintent = PendingIntent.getBroadcast(context, ReleaseReminder, i, 0)
         lateintent.cancel()
         alarm.cancel(lateintent)
     }
@@ -52,7 +51,7 @@ class ReleaseReminder : BroadcastReceiver() {
                 context,
                 it,
                 message,
-                RELEASE_REMINDER, intent
+                ReleaseReminder, intent
             )
         }
     }

@@ -1,20 +1,21 @@
 package com.example.submission1.pages
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.provider.Settings
+import androidx.lifecycle.ViewModelProvider
 import com.example.submission1.R
+import com.example.submission1.base.BaseActivity
 import com.example.submission1.local.prefs.SettingPref
-import com.example.submission1.reminder.DailyReminder
-import com.example.submission1.reminder.ReleaseReminder
+import com.example.submission1.reminder.DailyReciever
+import com.example.submission1.reminder.ReleaseReceiver
+import com.example.submission1.viewmodel.MovieVM
 import kotlinx.android.synthetic.main.activity_setting.*
-import java.util.*
 
-class SettingActivity : AppCompatActivity() {
+
+class SettingActivity : BaseActivity<MovieVM>() {
     private lateinit var setting: SettingPref
-    private lateinit var releaseRemainder: ReleaseReminder
-    private lateinit var dailyRemainder: DailyReminder
+    private lateinit var releaseRemainder: ReleaseReceiver
+    private lateinit var dailyRemainder: DailyReciever
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_setting)
@@ -24,12 +25,11 @@ class SettingActivity : AppCompatActivity() {
 
     private fun setupData() {
         setting = SettingPref(this)
-        releaseRemainder = ReleaseReminder()
-        dailyRemainder = DailyReminder()
+        releaseRemainder = ReleaseReceiver()
+        dailyRemainder = DailyReciever()
 
         sw_daily_remainder.isChecked = setting.dailyRemainder
         sw_release_remainder.isChecked = setting.releaseRemainder
-        tv_desc_language.text = Locale.getDefault().displayCountry
     }
 
     private fun setupAppearance() {
@@ -58,10 +58,6 @@ class SettingActivity : AppCompatActivity() {
             else
                 dailyRemainder.stopDailyReminder(this)
         }
-
-        layout_language.setOnClickListener {
-            startActivityForResult(Intent(Settings.ACTION_LOCALE_SETTINGS), 20)
-        }
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -71,5 +67,8 @@ class SettingActivity : AppCompatActivity() {
             finish()
         }
     }
+
+    override fun initViewModel(): MovieVM =
+        ViewModelProvider(this, ViewModelProvider.NewInstanceFactory()).get(MovieVM::class.java)
 
 }

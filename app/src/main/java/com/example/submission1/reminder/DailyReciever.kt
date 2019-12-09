@@ -9,8 +9,7 @@ import com.example.submission1.pages.MainActivity
 import com.example.submission1.utils.NotifUtils
 import java.util.*
 
-class DailyReminder : BroadcastReceiver() {
-    private val TAG = DailyReminder::class.java.simpleName
+class DailyReciever : BroadcastReceiver() {
     private val DAILY_REMINDER = 100
     override fun onReceive(context: Context?, intent: Intent?) {
         context?.let { sendNotif(it) }
@@ -18,7 +17,7 @@ class DailyReminder : BroadcastReceiver() {
 
     fun startDailyReminder(context: Context) {
         val alarm = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
-        val i = Intent(context, DailyReminder::class.java)
+        val i = Intent(context, DailyReciever::class.java)
         val calendar = Calendar.getInstance()
         calendar.set(Calendar.HOUR_OF_DAY, 7)
         calendar.set(Calendar.MINUTE, 0)
@@ -33,11 +32,11 @@ class DailyReminder : BroadcastReceiver() {
     }
 
     fun stopDailyReminder(context: Context) {
-        val i = Intent(context, DailyReminder::class.java)
+        val i = Intent(context, DailyReciever::class.java)
         val alarm = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
-        val lateintent = PendingIntent.getBroadcast(context, DAILY_REMINDER, i, 0)
-        lateintent.cancel()
-        alarm.cancel(lateintent)
+        val delayintent = PendingIntent.getBroadcast(context, DAILY_REMINDER, i, 0)
+        delayintent.cancel()
+        alarm.cancel(delayintent)
     }
 
     private fun sendNotif(context: Context) {
@@ -51,5 +50,4 @@ class DailyReminder : BroadcastReceiver() {
 
         )
     }
-
 }

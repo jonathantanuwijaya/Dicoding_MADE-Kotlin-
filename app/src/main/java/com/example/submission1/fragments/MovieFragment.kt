@@ -3,6 +3,7 @@ package com.example.submission1.fragments
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.view.Menu
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
@@ -51,6 +52,7 @@ class MovieFragment : BaseFragment<MovieVM>() {
     private val setValues = Observer<MovieRes> {
         it.results?.let { it2 -> showAdapter.setItem(it2) }
     }
+
 
     override fun initViewModel(): MovieVM {
         return ViewModelProvider(this,ViewModelProvider.NewInstanceFactory()).get(MovieVM::class.java).apply {

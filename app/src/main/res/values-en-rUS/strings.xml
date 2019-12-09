@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Submission4</string>
+    <string name="app_name">Submission5</string>
 
     <string name="internet">Network problems, check your internet connection and try again</string>
     <string name="server">Server under maintenance</string>
@@ -13,4 +13,10 @@
     <string name="favourite_movies">Favourite Movies</string>
     <string name="favourite_tv_show">Favourite TV Show</string>
     <string name="ganti_bahasa">Change Languange</string>
+    <string name="setting">Setting</string>
+    <string name="releasedfilm_reminder">Latest Film Reminder Released now </string>
+    <string name="latest_film_reminder">Latest Film Reminder</string>
+    <string name="remindme">Reminder</string>
+    <string name="remindme_text">Reminder back to app </string>
+    <string name="search">search</string>
 </resources>

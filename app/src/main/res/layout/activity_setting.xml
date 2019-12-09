@@ -1,25 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".pages.SettingActivity">
 
     <RelativeLayout
         android:id="@+id/layout_release_remainder"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginBottom="169dp"
         android:background="?selectableItemBackground"
-        android:padding="21dp">
+        android:padding="21dp"
+        app:layout_constraintBottom_toTopOf="@+id/layout_daily_remainder"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
         <TextView
             android:id="@+id/tv_title_release_remainder"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Reminder rilis film terbaru"
+            android:text="@string/releasedfilm_reminder"
             android:textSize="14sp" />
 
         <TextView
@@ -27,7 +32,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/tv_title_release_remainder"
-            android:text="Reminder film terbaru"
+            android:text="@string/latest_film_reminder"
             android:textSize="14sp" />
 
         <Switch
@@ -44,14 +49,19 @@
         android:id="@+id/layout_daily_remainder"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="548dp"
         android:background="?selectableItemBackground"
-        android:padding="21dp">
+        android:padding="21dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
 
         <TextView
             android:id="@+id/tv_title_daily_remainder"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Pengingat "
+            android:text="@string/remindme"
             android:textSize="14sp" />
 
         <TextView
@@ -59,7 +69,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/tv_title_daily_remainder"
-            android:text="Reminder kembali ke aplikasi"
+            android:text="@string/remindme_text"
             android:textSize="14sp" />
 
         <Switch
@@ -72,28 +82,5 @@
             android:background="?selectableItemBackgroundBorderless" />
     </RelativeLayout>
 
-    <RelativeLayout
-        android:id="@+id/layout_language"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="?selectableItemBackground"
-        android:padding="21dp">
 
-        <TextView
-            android:id="@+id/tv_title_language"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="21dp"
-            android:text="Bahasa"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/tv_desc_language"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/tv_title_language"
-            android:textSize="14sp"
-            tools:text="USA" />
-    </RelativeLayout>
-
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

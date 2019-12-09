@@ -22,8 +22,12 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : BaseActivity<MovieVM>() {
     private var page: Fragment = FavouriteFragment()
+//    private lateinit var menu :Menu
     override fun initViewModel(): MovieVM {
-        return ViewModelProvider(this,ViewModelProvider.NewInstanceFactory()).get(MovieVM::class.java)
+        return ViewModelProvider(
+            this,
+            ViewModelProvider.NewInstanceFactory()
+        ).get(MovieVM::class.java)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -54,10 +58,14 @@ class MainActivity : BaseActivity<MovieVM>() {
         supportActionBar?.elevation = 0f
 
 
-
-
     }
 
+//    override fun onResume() {
+//        super.onResume()
+//        when(page){
+//             is FavouriteFragment -> menu.findItem(R.id.menu_search)?.isVisible = false
+//        }
+//    }
     override fun onSaveInstanceState(outState: Bundle, outPersistentState: PersistableBundle) {
         super.onSaveInstanceState(outState, outPersistentState)
         supportFragmentManager.putFragment(outState, FRAGMENT_DATA, page)
@@ -65,14 +73,28 @@ class MainActivity : BaseActivity<MovieVM>() {
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.main_menu, menu)
+//        menu?.findItem(R.id.menu_search)?.isVisible = false
+//        when(this.page){
+//            is FavouriteFragment -> menu?.findItem(R.id.menu_search)?.isVisible = true
+//        }
+//        menu?.findItem(R.id.menu_search)?.isVisible = this.page != FavouriteFragment()
         return super.onCreateOptionsMenu(menu)
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if (item.itemId == R.id.action_change_settings) {
-            val mIntent = Intent(Settings.ACTION_LOCALE_SETTINGS)
-            startActivity(mIntent)
+        when (item.itemId) {
+            R.id.action_change_settings ->
+                startActivity(Intent(Settings.ACTION_LOCALE_SETTINGS))
+
+            R.id.remindsetting ->
+                startActivityForResult(
+                    Intent(
+                        this,
+                        SettingActivity::class.java
+                    ), 20
+                )
         }
+
         return super.onOptionsItemSelected(item)
     }
 }

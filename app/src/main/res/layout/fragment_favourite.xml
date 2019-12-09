@@ -28,7 +28,8 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rvlistMovieFavourite"
                 android:layout_width="match_parent"
-                android:layout_height="500dp" />
+                android:layout_weight="1"
+                android:layout_height="0dp" />
 
             <TextView
                 android:gravity="center"
@@ -46,7 +47,8 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rvlistTvShowFavourite"
                 android:layout_width="match_parent"
-                android:layout_height="500dp" />
+                android:layout_weight="1"
+                android:layout_height="0dp" />
 
 
         </LinearLayout>

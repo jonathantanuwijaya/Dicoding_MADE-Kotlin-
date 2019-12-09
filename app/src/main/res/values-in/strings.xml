@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Submission3</string>
+    <string name="app_name">Submission5</string>
 
     <string name="internet">Periksa koneksi anda</string>
     <string name="server">Internet Bermasalah</string>
@@ -16,4 +16,10 @@
     <string name="favourite_movies">Favorit Movies</string>
     <string name="favourite_tv_show">Favorit TV Show</string>
     <string name="ganti_bahasa">Ganti Bahasa</string>
+    <string name="setting">Pengaturan</string>
+    <string name="releasedfilm_reminder">Reminder rilis film terbaru</string>
+    <string name="latest_film_reminder">Reminder film terbaru</string>
+    <string name="remindme">Pengingat</string>
+    <string name="remindme_text">Reminder kembali ke aplikasi</string>
+    <string name="search">search</string>
 </resources>
