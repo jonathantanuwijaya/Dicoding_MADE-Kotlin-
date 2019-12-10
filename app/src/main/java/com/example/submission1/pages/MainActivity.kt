@@ -60,12 +60,6 @@ class MainActivity : BaseActivity<MovieVM>() {
 
     }
 
-//    override fun onResume() {
-//        super.onResume()
-//        when(page){
-//             is FavouriteFragment -> menu.findItem(R.id.menu_search)?.isVisible = false
-//        }
-//    }
     override fun onSaveInstanceState(outState: Bundle, outPersistentState: PersistableBundle) {
         super.onSaveInstanceState(outState, outPersistentState)
         supportFragmentManager.putFragment(outState, FRAGMENT_DATA, page)
@@ -73,11 +67,6 @@ class MainActivity : BaseActivity<MovieVM>() {
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.main_menu, menu)
-//        menu?.findItem(R.id.menu_search)?.isVisible = false
-//        when(this.page){
-//            is FavouriteFragment -> menu?.findItem(R.id.menu_search)?.isVisible = true
-//        }
-//        menu?.findItem(R.id.menu_search)?.isVisible = this.page != FavouriteFragment()
         return super.onCreateOptionsMenu(menu)
     }
 

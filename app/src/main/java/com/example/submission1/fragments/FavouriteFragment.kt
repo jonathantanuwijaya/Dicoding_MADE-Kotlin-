@@ -2,9 +2,7 @@ package com.example.submission1.fragments
 
 import android.content.Intent
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -34,11 +32,6 @@ class FavouriteFragment : BaseFragment<FavsVM>() {
 
     override fun onResume() {
         super.onResume()
-        loadDataFavourite()
-    }
-
-    override fun onStart() {
-        super.onStart()
         loadDataFavourite()
     }
 
@@ -112,6 +105,10 @@ class FavouriteFragment : BaseFragment<FavsVM>() {
         }
     }
 
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        menu.findItem(R.id.menu_search)?.isVisible = false
+    }
     override fun onShowProgressbar() {
         swiperefreshFavourite?.isRefreshing = true
     }
