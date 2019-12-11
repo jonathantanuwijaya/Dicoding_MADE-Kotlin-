@@ -17,12 +17,12 @@ import com.example.submission1.fragments.MovieFragment
 import com.example.submission1.fragments.TVShowFm
 import com.example.submission1.model.VPagerTitle
 import com.example.submission1.utils.Constant.Companion.FRAGMENT_DATA
+import com.example.submission1.utils.NotifUtils
 import com.example.submission1.viewmodel.MovieVM
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : BaseActivity<MovieVM>() {
     private var page: Fragment = FavouriteFragment()
-//    private lateinit var menu :Menu
     override fun initViewModel(): MovieVM {
         return ViewModelProvider(
             this,
@@ -84,5 +84,10 @@ class MainActivity : BaseActivity<MovieVM>() {
         }
 
         return super.onOptionsItemSelected(item)
+    }
+
+    override fun onNewIntent(intent: Intent?) {
+        super.onNewIntent(intent)
+        NotifUtils.resetStackNotification()
     }
 }

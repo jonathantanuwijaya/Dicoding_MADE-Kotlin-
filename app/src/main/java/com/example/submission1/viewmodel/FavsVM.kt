@@ -19,7 +19,7 @@ class FavsVM : BaseViewModel() {
     fun addFav(movie: Movie, type: FilmType) {
         view?.contextView()?.let {
             favouriteFunction = FavouriteFunc(it)
-            favouriteFunction.insert(
+            favouriteFunction.add(
                 FavMovie(
                     movie.id.toString(),
                     movie.title,
@@ -41,7 +41,7 @@ class FavsVM : BaseViewModel() {
     fun setToFavourite(id: String): LiveData<Boolean> {
         view?.contextView()?.let {
             favouriteFunction = FavouriteFunc(it)
-            favouriteFunction.getOne(id) { data: FavMovie? ->
+            favouriteFunction.readOne(id) { data: FavMovie? ->
                 data?.let {
                     favsData.postValue(true)
                 } ?: run {
@@ -82,17 +82,17 @@ class FavsVM : BaseViewModel() {
         return movieData
     }
 
-    private fun convertFavourite(data: MutableList<FavMovie>): MovieRes? {
+    private fun convertFavourite(data: MutableList<FavMovie?>): MovieRes? {
         val result = mutableListOf<Movie>()
         data.forEach {
             result.add(
                 Movie(
-                    it.id?.toInt(),
-                    it.title,
-                    it.origTitle,
-                    it.overview,
-                    it.backdrop_path,
-                    it.poster_path,
+                    it?.id?.toInt(),
+                    it?.title,
+                    it?.origTitle,
+                    it?.overview,
+                    it?.backdrop_path,
+                    it?.poster_path,
                     null,
                     null,
                     0.0,

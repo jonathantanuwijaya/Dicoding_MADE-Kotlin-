@@ -32,18 +32,7 @@ data class FavMovie(
     val backdrop_path: String?,
     val poster_path: String?,
     val type: String?
-) : Parcelable {
-    companion object {
-        const val TABLENAME = "FAVS_FILM"
-        const val ID_FILM = "ID"
-        const val TITLE = "FAVS_TITLE"
-        const val ORIGINAL_TITLE = "FAVS_ORIGINAL_TITLE"
-        const val OVERVIEW = "FAV_OVERVIEW"
-        const val POSTER = "FAV_POSTER"
-        const val BACKDROP = "FAV_BACKDROP"
-        const val TYPE = "FAVS_TYPE"
-    }
-}
+) :Parcelable
 
 enum class FilmType {
     MOVIE, TVSHOW

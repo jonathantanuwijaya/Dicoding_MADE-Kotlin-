@@ -13,10 +13,32 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <provider
+            android:name=".provider.MyContentProvider"
+            android:authorities="com.example.submission1"
+            android:enabled="true"
+            android:exported="true"
+            android:readPermission="com.example.submission1.READ_DATABASE"
+            android:writePermission="com.example.submission1.WRITE_DATABASE"></provider>
+
+        <receiver android:name=".widget.FavouriteStackWidget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/favourite_stack_widget_info" />
+        </receiver>
+
+        <service
+            android:name=".widget.StackWidgetService"
+            android:permission="android.permission.BIND_REMOTEVIEWS" />
+
         <receiver
             android:name=".reminder.ReleaseReceiver"
             android:enabled="true"
-            android:exported="true"></receiver>
+            android:exported="true" />
         <receiver
             android:name=".reminder.DailyReciever"
             android:enabled="true"
