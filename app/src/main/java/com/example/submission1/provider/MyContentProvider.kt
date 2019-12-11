@@ -21,18 +21,15 @@ class MyContentProvider : ContentProvider() {
         }
     }
     override fun delete(uri: Uri, selection: String?, selectionArgs: Array<String>?): Int {
-        TODO("Implement this to handle requests to delete one or more rows")
+        return 0
     }
 
     override fun getType(uri: Uri): String? {
-        TODO(
-            "Implement this to handle requests for the MIME type of the data" +
-                    "at the given URI"
-        )
+        return null
     }
 
     override fun insert(uri: Uri, values: ContentValues?): Uri? {
-        TODO("Implement this to handle requests to insert a new row.")
+        return null
     }
 
     override fun onCreate(): Boolean {
@@ -42,13 +39,11 @@ class MyContentProvider : ContentProvider() {
 
     override fun query(uri: Uri, projection: Array<String>?, selection: String?, selectionArgs: Array<String>?, sortOrder: String?): Cursor? {
         favoriteHelper!!.open()
-        val cursor: Cursor?
-        cursor = if (sUriMatcher.match(uri) == MOVIE) {
+        return if (sUriMatcher.match(uri) == MOVIE) {
             favoriteHelper!!.providerQuery()
         } else {
             null
         }
-        return cursor
     }
 
     override fun update(uri: Uri, values: ContentValues?, selection: String?, selectionArgs: Array<String>?): Int {

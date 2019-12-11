@@ -1,6 +1,8 @@
 package com.example.submission1.pages
 
 import android.annotation.SuppressLint
+import android.appwidget.AppWidgetManager
+import android.content.ComponentName
 import android.os.Bundle
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -12,6 +14,7 @@ import com.example.submission1.model.FilmType
 import com.example.submission1.model.Movie
 import com.example.submission1.utils.Constant
 import com.example.submission1.viewmodel.FavsVM
+import com.example.submission1.widget.FavouriteStackWidget
 import kotlinx.android.synthetic.main.activity_detail_movie.*
 
 class DetailMovieActivity : BaseActivity<FavsVM>() {
@@ -45,6 +48,7 @@ class DetailMovieActivity : BaseActivity<FavsVM>() {
                 }
             }
             viewmodel.setToFavourite(movie?.id.toString()).observe(this, setFavButton)
+            updateWidget()
         }
 
         viewmodel.setToFavourite(movie?.id.toString()).observe(this, setFavButton)
@@ -75,7 +79,12 @@ class DetailMovieActivity : BaseActivity<FavsVM>() {
         vm.setupView(this)
         return vm
     }
-
+    private fun updateWidget() {
+        val manager = AppWidgetManager.getInstance(this)
+        val theWidget = ComponentName(this, FavouriteStackWidget::class.java)
+        val id = manager.getAppWidgetIds(theWidget)
+        manager.notifyAppWidgetViewDataChanged(id, R.id.stack_view)
+    }
 
 }
 
