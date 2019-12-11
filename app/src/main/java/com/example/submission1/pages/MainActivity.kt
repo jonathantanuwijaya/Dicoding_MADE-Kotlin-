@@ -59,7 +59,6 @@ class MainActivity : BaseActivity<MovieVM>() {
 
 
     }
-
     override fun onSaveInstanceState(outState: Bundle, outPersistentState: PersistableBundle) {
         super.onSaveInstanceState(outState, outPersistentState)
         supportFragmentManager.putFragment(outState, FRAGMENT_DATA, page)

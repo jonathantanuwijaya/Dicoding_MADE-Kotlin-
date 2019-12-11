@@ -84,6 +84,11 @@ class FavouriteFragment : BaseFragment<FavsVM>() {
 
     }
 
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        menu.findItem(R.id.menu_search)?.isVisible = false
+        super.onCreateOptionsMenu(menu, inflater)
+    }
+
     private fun loadDataFavourite() {
         viewmodel?.getFavouriteMovies()?.observe(viewLifecycleOwner, setShowMovie)
         viewmodel?.getFavouriteTVShow()?.observe(viewLifecycleOwner, setShowTVShow)
@@ -103,11 +108,6 @@ class FavouriteFragment : BaseFragment<FavsVM>() {
             favAdapterTVShow.setItem(itdata)
             onHideProgressbar()
         }
-    }
-
-    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-        super.onCreateOptionsMenu(menu, inflater)
-        menu.findItem(R.id.menu_search)?.isVisible = false
     }
     override fun onShowProgressbar() {
         swiperefreshFavourite?.isRefreshing = true

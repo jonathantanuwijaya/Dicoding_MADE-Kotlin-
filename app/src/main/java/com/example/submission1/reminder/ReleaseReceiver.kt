@@ -5,7 +5,7 @@ import android.app.PendingIntent
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
-import com.example.submission1.api.ApiMovie
+import com.example.submission1.api.ApiDbMovies
 import com.example.submission1.api.Retro
 import com.example.submission1.api.RxUtils
 import com.example.submission1.model.Movie
@@ -63,7 +63,7 @@ class ReleaseReceiver : BroadcastReceiver() {
 
             subs = Retro()
                 .get()
-                .create(ApiMovie::class.java)
+                .create(ApiDbMovies::class.java)
                 .getRelease(sDate, sDate, getLocale())
                 .compose(RxUtils.applyObservableAsync())
                 .subscribe {

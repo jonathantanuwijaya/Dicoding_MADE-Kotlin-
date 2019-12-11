@@ -18,7 +18,7 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        buildConfigField("String", "BASE_URL", "\"https://api.themoviedb.org/3/discover/\"")
+        buildConfigField("String", "BASE_URL", "\"https://api.themoviedb.org/3/\"")
         buildConfigField("String", "APIKEY", "\"191221b09fedeae5ffb6cf9443f7b97a\"")
         buildConfigField("String", "BASE_URL_POSTER", "\"https://image.tmdb.org/t/p/\"")
         multiDexEnabled true
