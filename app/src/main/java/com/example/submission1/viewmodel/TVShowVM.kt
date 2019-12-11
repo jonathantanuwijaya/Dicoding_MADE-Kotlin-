@@ -29,6 +29,7 @@ class TVShowVM : BaseViewModel() {
             }
             is SearchResponse -> {
                 searchTVLiveData.postValue(data)
+
             }
         }
     }

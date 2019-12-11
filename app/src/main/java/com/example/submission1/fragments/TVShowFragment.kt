@@ -5,6 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.*
 import android.widget.SearchView
+import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -47,7 +48,7 @@ class TVShowFm : BaseFragment<TVShowVM>() {
             )
         )
         swiperefresh.setOnRefreshListener {
-            viewmodel?.getTVShow()?.observe(this, setTVShow)
+            viewmodel?.getTVShow()?.observe(viewLifecycleOwner, setTVShow)
         }
 
         showAdapter = MovieShowAdapter {
@@ -65,12 +66,16 @@ class TVShowFm : BaseFragment<TVShowVM>() {
 
     private val setSearch = Observer<SearchResponse> {
         movieResponse = MovieRes(it.page, it.results, it.total_pages, it.total_results)
+        if (it.results.isNullOrEmpty() ){
+            Toast.makeText(requireContext(),"Data tidak ditemukan", Toast.LENGTH_SHORT).show()
+
+        }
         it.results?.let { data -> showAdapter.setItem(data) }
     }
 
     override fun onPrepareOptionsMenu(menu: Menu) {
-        val mSearch = menu.findItem(R.id.menu_search)
-        val searchView = mSearch.actionView as SearchView
+        mSearch = menu.findItem(R.id.menu_search)
+        searchView = mSearch.actionView as SearchView
         searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String?): Boolean {
                 query?.let { search(it) }

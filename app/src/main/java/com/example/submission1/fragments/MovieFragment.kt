@@ -4,6 +4,8 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.*
 import android.widget.SearchView
+import android.widget.Toast
+
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -58,7 +60,6 @@ class MovieFragment : BaseFragment<MovieVM>() {
         rvlistMovie.layoutManager = LinearLayoutManager(contextView())
         rvlistMovie.overScrollMode = View.OVER_SCROLL_NEVER
         rvlistMovie.adapter = showAdapter
-//        restoreSaveInstanceState(savedInstanceState)
     }
 
 
@@ -79,6 +80,12 @@ class MovieFragment : BaseFragment<MovieVM>() {
 
     private val setSearch = Observer<SearchResponse> {
         movieResponse = MovieRes(it.page, it.results, it.total_pages, it.total_results)
+        if (it.results.isNullOrEmpty() ){
+            Toast.makeText(requireContext(),"Data tidak ditemukan",Toast.LENGTH_SHORT).show()
+
+        }
+
+
         it.results?.let { data -> showAdapter.setItem(data) }
     }
 
