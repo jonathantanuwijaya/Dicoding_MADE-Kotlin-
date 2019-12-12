@@ -33,9 +33,9 @@ class DetailMovieActivity : BaseActivity<FavsVM>() {
 
     @SuppressLint("SetTextI18n")
     private fun initViewConfigure() {
-
         val movie = intent?.getParcelableExtra<Movie>(Constant.INTENT_DATA)
         type = intent.getSerializableExtra(Constant.FRAGMENT_DATA) as FilmType
+
         tvJudulMovieDetail.text = movie?.title
         tvDeskripsiMovieDetail.text = movie?.overview
 

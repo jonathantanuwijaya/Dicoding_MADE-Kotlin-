@@ -7,6 +7,5 @@ interface Constant {
         const val POSTER_LARGE = "/w500/"
         const val INTENT_DATA = "INTENT_DATA"
         const val FRAGMENT_DATA = "FRAGMENT_DATA"
-        const val DB_FAVOURITE = "FAVOURITE_MOVIE_DB"
     }
 }

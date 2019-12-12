@@ -1,6 +1,7 @@
 package com.example.submission1.fragments
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.*
 import android.widget.SearchView
@@ -17,6 +18,7 @@ import com.example.submission1.model.FilmType
 import com.example.submission1.model.MovieRes
 import com.example.submission1.model.SearchResponse
 import com.example.submission1.pages.DetailMovieActivity
+import com.example.submission1.provider.DatabaseContract.FavoriteColumns.Companion.CONTENT_URI
 import com.example.submission1.utils.Constant
 import com.example.submission1.viewmodel.MovieVM
 import kotlinx.android.synthetic.main.main_fragment.*
@@ -51,6 +53,8 @@ class MovieFragment : BaseFragment<MovieVM>() {
 
         showAdapter = MovieShowAdapter { movie ->
             val intent = Intent(contextView(), DetailMovieActivity::class.java)
+//            val uri = Uri.parse(CONTENT_URI.toString() + "/"+movie.id)
+//            intent.setData(uri)
             intent.putExtra(Constant.INTENT_DATA, movie)
             intent.putExtra(Constant.FRAGMENT_DATA, FilmType.MOVIE)
             startActivity(intent)

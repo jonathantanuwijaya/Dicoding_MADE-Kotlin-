@@ -2,6 +2,7 @@ package com.example.submission1.fragments
 
 import android.annotation.SuppressLint
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.*
 import android.widget.SearchView
@@ -17,6 +18,7 @@ import com.example.submission1.model.FilmType
 import com.example.submission1.model.MovieRes
 import com.example.submission1.model.SearchResponse
 import com.example.submission1.pages.DetailMovieActivity
+import com.example.submission1.provider.DatabaseContract
 import com.example.submission1.utils.Constant
 import com.example.submission1.viewmodel.TVShowVM
 import kotlinx.android.synthetic.main.main_fragment.*
@@ -53,6 +55,8 @@ class TVShowFm : BaseFragment<TVShowVM>() {
 
         showAdapter = MovieShowAdapter {
             val intent = Intent(contextView(), DetailMovieActivity::class.java)
+            val uri = Uri.parse(DatabaseContract.FavoriteColumns.CONTENT_URI.toString() + "/"+it.id)
+            intent.setData(uri)
             intent.putExtra(Constant.INTENT_DATA, it)
             intent.putExtra(Constant.FRAGMENT_DATA, FilmType.TVSHOW)
             startActivity(intent)
