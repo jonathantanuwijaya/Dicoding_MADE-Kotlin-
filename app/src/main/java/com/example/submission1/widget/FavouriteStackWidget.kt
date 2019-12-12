@@ -9,9 +9,7 @@ import android.content.Intent
 import android.net.Uri
 import android.widget.RemoteViews
 import android.widget.Toast
-import androidx.core.content.ContextCompat.startActivity
 import com.example.submission1.R
-import com.example.submission1.pages.DetailMovieActivity
 import com.example.submission1.pages.MainActivity
 
 /**
@@ -48,7 +46,7 @@ class FavouriteStackWidget : AppWidgetProvider() {
         views.setRemoteAdapter(R.id.stack_view, intent)
         views.setEmptyView(R.id.stack_view, R.id.empty_view)
 
-        val onclicked = Intent(context, DetailMovieActivity::class.java)
+        val onclicked = Intent(context, MainActivity::class.java)
         onclicked.action = ONCLICK
         onclicked.putExtra(AppWidgetManager.EXTRA_APPWIDGET_ID, appWidgetId)
         intent.data = Uri.parse(intent.toUri(Intent.URI_INTENT_SCHEME))
@@ -57,12 +55,6 @@ class FavouriteStackWidget : AppWidgetProvider() {
             .addNextIntentWithParentStack(onclicked)
             .getPendingIntent(0,PendingIntent.FLAG_UPDATE_CURRENT)
 
-
-
-        val launch = Intent(context, MainActivity::class.java)
-        val pending = PendingIntent.getBroadcast(context,0,onclicked,PendingIntent.FLAG_UPDATE_CURRENT)
-        val oddd = PendingIntent.getActivity(context,0,launch,0)
-//        views.setOnClickPendingIntent(R.id.stack_view,oddd)
         views.setPendingIntentTemplate(R.id.stack_view,onclickedTemplate)
         appWidgetManager.updateAppWidget(appWidgetId, views)
     }

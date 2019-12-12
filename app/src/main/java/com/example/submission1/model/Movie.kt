@@ -33,7 +33,7 @@ data class FavMovie(
     val backdrop_path: String?,
     val poster_path: String?,
     val type: String?
-) :Parcelable
+) : Parcelable
 
 
 enum class FilmType {
