@@ -4,7 +4,7 @@ import android.net.Uri
 import android.provider.BaseColumns
 
 object DatabaseContract {
-    const val AUTHORITY = "com.example.moviecatalogueconsumer"
+    const val AUTHORITY = "com.example.submission1"
     private const val SCHEME = "content"
 
     class FavoriteColumns : BaseColumns {
