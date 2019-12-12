@@ -10,7 +10,7 @@ import com.example.submission1.utils.NotifUtils
 import java.util.*
 
 class DailyReciever : BroadcastReceiver() {
-    private val DAILY_REMINDER = 100
+    private val DAILYREMINDER = 100
     override fun onReceive(context: Context?, intent: Intent?) {
         context?.let { sendNotif(it) }
     }
@@ -22,19 +22,19 @@ class DailyReciever : BroadcastReceiver() {
         calendar.set(Calendar.HOUR_OF_DAY, 7)
         calendar.set(Calendar.MINUTE, 0)
         calendar.set(Calendar.SECOND, 0)
-        val lateintent = PendingIntent.getBroadcast(context, DAILY_REMINDER, i, 0)
+        val lateintent = PendingIntent.getBroadcast(context, DAILYREMINDER, i, 0)
         alarm.setInexactRepeating(
-            AlarmManager.RTC_WAKEUP,
-            calendar.timeInMillis,
-            AlarmManager.INTERVAL_DAY,
-            lateintent
+                AlarmManager.RTC_WAKEUP,
+                calendar.timeInMillis,
+                AlarmManager.INTERVAL_DAY,
+                lateintent
         )
     }
 
     fun stopDailyReminder(context: Context) {
         val i = Intent(context, DailyReciever::class.java)
         val alarm = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
-        val delayintent = PendingIntent.getBroadcast(context, DAILY_REMINDER, i, 0)
+        val delayintent = PendingIntent.getBroadcast(context, DAILYREMINDER, i, 0)
         delayintent.cancel()
         alarm.cancel(delayintent)
     }
@@ -42,11 +42,11 @@ class DailyReciever : BroadcastReceiver() {
     private fun sendNotif(context: Context) {
         val i = Intent(context, MainActivity::class.java)
         NotifUtils.showNotification(
-            context,
-            "Submission 5",
-            "Movie Catalogue",
-            DAILY_REMINDER,
-            i
+                context,
+                "Submission 5",
+                "Movie Catalogue",
+                DAILYREMINDER,
+                i
 
         )
     }

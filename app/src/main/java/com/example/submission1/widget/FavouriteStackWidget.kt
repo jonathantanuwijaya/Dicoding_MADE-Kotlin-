@@ -8,7 +8,6 @@ import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import android.widget.RemoteViews
-import android.widget.Toast
 import com.example.submission1.R
 import com.example.submission1.pages.MainActivity
 
@@ -18,7 +17,6 @@ import com.example.submission1.pages.MainActivity
 class FavouriteStackWidget : AppWidgetProvider() {
     companion object {
         private const val ONCLICK = "com.example.submission1.ONCLICK"
-        const val EXTRA_ITEM = "com.example.submission1.EXTRA_ITEM"
     }
 
 
@@ -59,14 +57,5 @@ class FavouriteStackWidget : AppWidgetProvider() {
         appWidgetManager.updateAppWidget(appWidgetId, views)
     }
 
-    override fun onReceive(context: Context?, intent: Intent?) {
-        super.onReceive(context, intent)
-        if(intent?.action != null){
-            if (intent.action == ONCLICK){
-                val viewIndex = intent.getIntExtra(EXTRA_ITEM,0)
-                Toast.makeText(context,"Touched View $viewIndex",Toast.LENGTH_SHORT).show()
 
-            }
-        }
-    }
 }

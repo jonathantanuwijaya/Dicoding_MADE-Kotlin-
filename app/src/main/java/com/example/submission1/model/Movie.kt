@@ -1,6 +1,5 @@
 package com.example.submission1.model
 
-import android.database.Cursor
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize
 import com.google.gson.annotations.SerializedName

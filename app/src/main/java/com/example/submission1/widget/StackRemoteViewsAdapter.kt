@@ -7,17 +7,15 @@ import android.net.Uri
 import android.util.Log
 import android.widget.RemoteViews
 import android.widget.RemoteViewsService
-import androidx.core.os.bundleOf
 import com.example.submission1.BuildConfig.BASE_URL_POSTER
 import com.example.submission1.R
 import com.example.submission1.model.FavMovie
-import com.example.submission1.model.FilmType
 import com.example.submission1.provider.DatabaseContract.FavoriteColumns.Companion.CONTENT_URI
-import com.example.submission1.utils.Constant
 import java.net.URL
 
 
 
+@Suppress("NULLABILITY_MISMATCH_BASED_ON_JAVA_ANNOTATIONS")
 class StackRemoteViewsAdapter(
     val context: Context
 ) : RemoteViewsService.RemoteViewsFactory {
@@ -48,39 +46,14 @@ class StackRemoteViewsAdapter(
     override fun getViewAt(position: Int): RemoteViews {
         val movie = mWidgetItems[position]
         val rv = RemoteViews(context.packageName, R.layout.favourite_stack_widget)
-        val type : FilmType
         try {
             val imageUrl = URL(BASE_URL_POSTER + "/w185/" + movie?.poster_path)
             val bitmap = BitmapFactory.decodeStream(imageUrl.openConnection().getInputStream())
-//            val extras = bundleOf(FavouriteStackWidget.EXTRA_ITEM to position)
             val fillIntent = Intent()
-//            val launch = Intent(context, MainActivity::class.java)
-//            val searchtype: FavoriteHelper? = null
-//            val oddd = PendingIntent.getActivity(context,0,launch,0)
             val uri = Uri.parse(CONTENT_URI.toString() + "/"+movie?.id)
             fillIntent.data = uri
-
-            println("cek movie id = $movie.id")
-//            val movie2: FavMovie? = movie?.id?.let { searchtype?.queryById(it) }
-//            movie?.id?.let { searchtype?.queryById(it) }
-
-
-//            fillIntent.putExtra(Constant.INTENT_DATA, movie)
-            println("type movie : ${movie?.type}")
-            println("Isi Movie : $movie")
-
-            type = if(movie?.type == "MOVIE"){
-                FilmType.MOVIE
-            }else{
-                FilmType.TVSHOW
-            }
-
-
-
-//            fillIntent.putExtra(Constant.FRAGMENT_DATA, FilmType.MOVIE )
             rv.setImageViewBitmap(R.id.imageView, bitmap)
             rv.setTextViewText(R.id.tv_title, movie?.origTitle)
-//            rv.setOnClickPendingIntent(R.id.imageView,oddd)
             rv.setOnClickFillInIntent(R.id.imageView, fillIntent)
 
         } catch (e: Exception) {

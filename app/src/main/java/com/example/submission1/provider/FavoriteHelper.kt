@@ -10,7 +10,7 @@ import com.example.submission1.model.FavMovie
 import java.util.*
 
 class FavoriteHelper private constructor(context: Context?) {
-    private val dataBaseHelper: DatabaseHelper = DatabaseHelper(context)
+    private val dataBaseHelper: DBHelper = DBHelper(context)
     private var database: SQLiteDatabase? = null
     @Throws(SQLException::class)
     fun open() {

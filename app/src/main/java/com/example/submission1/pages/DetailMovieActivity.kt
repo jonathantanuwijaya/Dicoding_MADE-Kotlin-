@@ -55,14 +55,14 @@ class DetailMovieActivity : BaseActivity<FavsVM>() {
         viewmodel.setToFavourite(movie?.id.toString()).observe(this, setFavButton)
 
         Glide.with(this)
-            .load(BuildConfig.BASE_URL_POSTER + Constant.POSTER_LARGE + movie?.backdrop_path)
-            .placeholder(R.mipmap.ic_launcher)
-            .into(ivMovie)
+                .load(BuildConfig.BASE_URL_POSTER + Constant.POSTER_LARGE + movie?.backdrop_path)
+                .placeholder(R.mipmap.ic_launcher)
+                .into(ivMovie)
 
         Glide.with(this)
-            .load(BuildConfig.BASE_URL_POSTER + Constant.POSTER_MEDIUM + movie?.poster_path)
-            .placeholder(R.mipmap.ic_launcher)
-            .into(ivMovie)
+                .load(BuildConfig.BASE_URL_POSTER + Constant.POSTER_MEDIUM + movie?.poster_path)
+                .placeholder(R.mipmap.ic_launcher)
+                .into(ivMovie)
     }
 
     private val setFavButton = Observer<Boolean> {
@@ -76,10 +76,11 @@ class DetailMovieActivity : BaseActivity<FavsVM>() {
 
     override fun initViewModel(): FavsVM {
         val vm =
-            ViewModelProvider(this, ViewModelProvider.NewInstanceFactory()).get(FavsVM::class.java)
+                ViewModelProvider(this, ViewModelProvider.NewInstanceFactory()).get(FavsVM::class.java)
         vm.setupView(this)
         return vm
     }
+
     private fun updateWidget() {
         val manager = AppWidgetManager.getInstance(this)
         val theWidget = ComponentName(this, FavouriteStackWidget::class.java)

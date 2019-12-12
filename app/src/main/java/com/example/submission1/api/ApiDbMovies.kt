@@ -2,6 +2,7 @@ package com.example.submission1.api
 
 import com.example.submission1.BuildConfig.APIKEY
 import com.example.submission1.model.MovieRes
+import com.example.submission1.model.ReleaseResponse
 import com.example.submission1.model.SearchResponse
 import io.reactivex.Observable
 import retrofit2.http.GET
@@ -22,7 +23,7 @@ interface ApiDbMovies {
         @Query("primary_release_date.gte") startDate: String,
         @Query("primary_release_date.lte") endDate: String,
         @Query("language") lang: String
-    ): Observable<MovieRes>
+    ): Observable<ReleaseResponse>
 
     @GET("search/tv?api_key=$APIKEY")
     fun searchTV(
