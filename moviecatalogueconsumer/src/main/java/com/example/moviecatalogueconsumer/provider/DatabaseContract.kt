@@ -1,10 +1,10 @@
-package com.example.submission1.provider
+package com.example.moviecatalogueconsumer.provider
 
 import android.net.Uri
 import android.provider.BaseColumns
 
 object DatabaseContract {
-    const val AUTHORITY = "com.example.submission1"
+    const val AUTHORITY = "com.example.moviecatalogueconsumer"
     private const val SCHEME = "content"
 
     class FavoriteColumns : BaseColumns {

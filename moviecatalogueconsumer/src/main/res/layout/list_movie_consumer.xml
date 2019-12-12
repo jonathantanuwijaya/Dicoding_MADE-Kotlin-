@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/RL_Movie"
+    app:cardCornerRadius="10dp"
+    android:elevation="8dp"
+    android:layout_marginBottom="8dp"
+    android:padding="16dp">
+
+
+    <RelativeLayout
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/img_photoC"
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/tvJudulMovieC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="26dp"
+            android:layout_toEndOf="@id/img_photoC"
+            android:text="nama movie"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="26dp"
+            android:layout_toRightOf="@id/img_photoC" />
+
+        <TextView
+            android:id="@+id/tvDeskripsiC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvJudulMovieC"
+            android:layout_marginStart="26dp"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@id/img_photoC"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="deskripsi movie"
+            android:layout_marginLeft="26dp"
+            android:layout_toRightOf="@id/img_photoC" />
+
+    </RelativeLayout>
+
+
+
+</androidx.cardview.widget.CardView>

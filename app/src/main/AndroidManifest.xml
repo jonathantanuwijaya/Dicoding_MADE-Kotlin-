@@ -4,7 +4,8 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <permission android:name="com.example.submission1.WRITE_DATABASE" android:protectionLevel="normal" />
+    <permission android:name="com.example.submission1.READ_DATABASE" android:protectionLevel="normal" />
 
     <application
         android:allowBackup="true"
@@ -14,12 +15,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <provider
-            android:name=".provider.MyContentProvider"
             android:authorities="com.example.submission1"
+            android:name=".provider.MyContentProvider"
             android:enabled="true"
             android:exported="true"
             android:readPermission="com.example.submission1.READ_DATABASE"
-            android:writePermission="com.example.submission1.WRITE_DATABASE"></provider>
+            android:writePermission="com.example.submission1.WRITE_DATABASE"/>
 
         <receiver android:name=".widget.FavouriteStackWidget">
             <intent-filter>
