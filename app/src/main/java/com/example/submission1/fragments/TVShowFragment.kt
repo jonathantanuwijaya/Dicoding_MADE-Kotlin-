@@ -56,7 +56,7 @@ class TVShowFm : BaseFragment<TVShowVM>() {
         showAdapter = MovieShowAdapter {
             val intent = Intent(contextView(), DetailMovieActivity::class.java)
             val uri = Uri.parse(DatabaseContract.FavoriteColumns.CONTENT_URI.toString() + "/"+it.id)
-            intent.setData(uri)
+            intent.data = uri
             intent.putExtra(Constant.INTENT_DATA, it)
             intent.putExtra(Constant.FRAGMENT_DATA, FilmType.TVSHOW)
             startActivity(intent)
